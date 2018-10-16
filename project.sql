@@ -31,7 +31,7 @@ create table COURSE (
 );
 
 insert into COURSE values ('C123', 'C프로그래밍', 3, '컴퓨터', '김성국');
-insert into COURSE values ('C312', '자료구조', 3,	'컴퓨터', '황수관');
+insert into COURSE values ('C312', '자료구조', 3, '컴퓨터', '황수관');
 insert into COURSE values ('C324', '화일구조', 3, '컴퓨터', '이규찬');
 insert into COURSE values ('C413', '데이터베이스', 3, '컴퓨터', '이일로');
 insert into COURSE values ('E412', '반도체', 3, '전자', '홍봉진');
