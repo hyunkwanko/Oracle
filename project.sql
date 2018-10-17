@@ -52,16 +52,16 @@ create table ENROL (
 );
 
 insert into ENROL values (100, 'C413', 'A', 90, 95);
-insert into ENROL values (100, 'E412', 'A', 95,	95);
-insert into ENROL values (200, 'C123', 'B', 85,	80);
-insert into ENROL values (300, 'C312', 'A', 90,	95);
-insert into ENROL values (300, 'C324', 'C', 75,	75);
-insert into ENROL values (300, 'C413', 'A', 95,	90);
-insert into ENROL values (400, 'C312', 'A', 90,	95);
-insert into ENROL values (400, 'C324', 'A', 95,	90);
-insert into ENROL values (400, 'C413', 'B', 80,	85);
-insert into ENROL values (400, 'E412', 'C', 65,	75);
-insert into ENROL values (500, 'C312', 'B', 85,	80);
+insert into ENROL values (100, 'E412', 'A', 95, 95);
+insert into ENROL values (200, 'C123', 'B', 85, 80);
+insert into ENROL values (300, 'C312', 'A', 90, 95);
+insert into ENROL values (300, 'C324', 'C', 75, 75);
+insert into ENROL values (300, 'C413', 'A', 95, 90);
+insert into ENROL values (400, 'C312', 'A', 90, 95);
+insert into ENROL values (400, 'C324', 'A', 95, 90);
+insert into ENROL values (400, 'C413', 'B', 80, 85);
+insert into ENROL values (400, 'E412', 'C', 65, 75);
+insert into ENROL values (500, 'C312', 'B', 85, 80);
 
 commit;
 
