@@ -51,6 +51,8 @@ create table ENROL (
   check (grade in ('A', 'B', 'C', 'D', 'F'))
 );
 
+
+
 insert into ENROL values (100, 'C413', 'A', 90, 95);
 insert into ENROL values (100, 'E412', 'A', 95, 95);
 insert into ENROL values (200, 'C123', 'B', 85, 80);
