@@ -74,10 +74,11 @@ select sno from enrol where midterm >= 90 or finterm >= 90;
 select distinct sno from enrol where midterm < finterm; /* 출력값이 같으면 하나만 출력한다. */
 
 select * from student where dept = '컴퓨터' order by year asc, sno asc; /* 오름 차순 */ /* desc 가 내림 차순 */
-select * from student where sname like '나%'; /* %는 글자가 없거나 임의의 갯수가 와도 괜찮다. */
+select * from student where sname like '_기_'; /* %는 글자가 없거나 임의의 갯수가 와도 괜찮다. */
 select * from student where year in (1, 2); /* 1학년 또는 2학년이랑 같다. */
 select * from STUDENT where year between 1 and 3; /* 1 ~ 3사이 */
 select sno as 학번, sname 이름, year+1 진급학년 from STUDENT; /* 이름만 바꾼다. */
+
 
 /* drop table COURSE; ENROL 테이블에서 외부 참조하고 있어서 ERROR 발생 */
 /* drop table COURSE cascade constraints;*/ /* 외부 참조하고 있는 것까지 다 없애라 */
