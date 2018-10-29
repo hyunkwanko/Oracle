@@ -29,9 +29,9 @@ insert into M values ('19900530-2000007', '이창민', 27, '010-7777-0001');
 insert into M values ('19900530-2000008', '임슬옹', 28, '010-8888-0001');
 
 create table B (
-    gname nvarchar2(5) not null,
+    gname nvarchar2(5),
     jno char(16) not null,
-    jyear integer,
+    jyear number(4),
     primary key (gname, jno),
     foreign key (gname) references G(gname)
         on delete cascade,
@@ -47,6 +47,8 @@ insert into B values ('원더걸스', '19900530-2000005', 2005);
 insert into B values ('2AM', '19900530-2000006', 2010);
 insert into B values ('2AM', '19900530-2000007', 2010);
 insert into B values ('2AM', '19900530-2000008', 2010);
+insert into B values ('원더걸스', '19930530-2000005', 2005);
+insert into B values ('원더걸스', '19920530-2000005', 2005);
 
 select genre from G where gtype = 'F';
 select distinct G.gname from G join B on G.gname = B.gname where jyear = 2010;
