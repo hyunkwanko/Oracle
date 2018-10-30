@@ -90,3 +90,25 @@ delete from ENROL where SNO = 200;
 */
 
 /* select * from all_tables; */
+
+select dept, count(*) from course group by dept; /* 과목별로 튜플의 개수 */
+select max(finterm), min(finterm), avg(finterm) from enrol;
+select cno 과목번호, count(*) 수강인원, avg(finterm) 기말평균, avg(midterm) 중간평균 from enrol group by cno having count(*) >= 3; /* 여기선 그룹화를 먼저 해야해서 where을 쓸 수 없다. having을 써서 조건을 쓴다. */
+select cno 과목번호, count(*) 수강인원, avg(finterm) 기말평균, avg(midterm) 중간평균 from enrol group by cno having avg(midterm) >= 80;
+select sname from student where sno in (select sno from enrol where cno='C413'); /* 중첩된 select, Nested select */
+select * from (select sno from enrol where cno = 'C413'); /* 이런 식으로 select 안에 또 select가 들어갈 수 있다. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
