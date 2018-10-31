@@ -98,11 +98,49 @@ select cno 과목번호, count(*) 수강인원, avg(finterm) 기말평균, avg(m
 select sname from student where sno in (select sno from enrol where cno='C413'); /* 중첩된 select, Nested select */
 select * from (select sno from enrol where cno = 'C413'); /* 이런 식으로 select 안에 또 select가 들어갈 수 있다. */
 
+select * from student;
 
+select dept student where sno = 100;
 
+select * from student where dept = '컴퓨터';
 
+select * from student where dept = (select dept from student where sno = 100); /* 부속 질의는 가능한 권장하지 않는다. */
 
+/* 여기부터 중요하다. */
+select * from student;
+select * from enrol;
+select * from student s, enrol e where s.sno = e.sno; /* 카디션 프로덕트, alias 사용 */
+select count(*) from student, enrol;
 
+select e.cno from student s join enrol e on s.sno = e.sno; /* join */
+
+insert into student values (600, '홍길동', 3, 'IT');
+
+select * from student s left outer join enrol e on s.sno = e.sno where cno is null; /* 외부 조인 -> 수강한 과목이 아무것도 없는 학생을 찾을 때 사용 */
+
+-- 등록한 학생이 아무도 없는 과목(과목번호)을 찾아라.
+select * from course;
+insert into course values('T411', '모바일', 3, 'IT', '아무개');
+
+select * from enrol e right outer join course c on e.cno = c.cno where e.sno is null;
+
+select * from course c left outer join enrol e on e.cno = c.cno where e.sno is null; /* 위와 같은 쿼리문이다. */
+
+select * from student s natural join enrol e; /* 자연 조인 */
+
+select * from student s natural join enrol where enrol.cno = 'C413';
+
+select * from student s join enrol e on s.sno = e.sno where e.cno = 'C413';
+
+select sname from student s, enrol e where s.sno = e.sno and e.cno = 'C413'; /* 답이 하나만 있는 것이 아니다. -> 중첩 select도 가능 */
+
+-- 등록한 과목이 아무것도 없는 학생
+select * from student s left outer join enrol e on s.sno = e.sno where cno is null;
+
+select * from student where sno not in(select sno from enrol);
+
+-- 데이터베이스 과목을 듣는 학생들을 찾아라.
+select sname from (student natural join enrol) join course on enrol.cno = course.cno where cname = '데이터베이스'; /* 자연 조인쓰면 안된다. dept때문에 */
 
 
 
