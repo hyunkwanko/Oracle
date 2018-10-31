@@ -142,9 +142,12 @@ select * from student where sno not in(select sno from enrol);
 -- 데이터베이스 과목을 듣는 학생들을 찾아라.
 select sname from (student natural join enrol) join course on enrol.cno = course.cno where cname = '데이터베이스'; /* 자연 조인쓰면 안된다. dept때문에 */
 
+-- 정기태 학생이 수강한 모든 과목의 중간고사 성적 평균을 구하라.
+select avg(midterm) as 중간교사평균 from student natural join enrol where sname = '정기태';
 
-
-
+-- 데이터베이스 과목의 기말고사 최저점수는?
+select min(finterm) as 기말최저점수 from enrol natural join course where cname = '데이터베이스';
+select * from enrol natural join course where cname = '데이터베이스';
 
 
 
