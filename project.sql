@@ -148,6 +148,16 @@ select avg(midterm) as 중간교사평균 from student natural join enrol where 
 -- 데이터베이스 과목의 기말고사 최저점수는?
 select min(finterm) as 기말최저점수 from enrol natural join course where cname = '데이터베이스'; /* natural 조인은 항상 유의해서 쓸 것 */
 select * from enrol natural join course where cname = '데이터베이스';
+--
+select * from course c join enrol e on c.cno = e.cno;
+select * from course c, enrol e where c.cno = e.cno; /* 파티션 프로덕트 */
+select min(finterm) from course natural join enrol where cname = '데이터베이스'; /* 공통된 것은 cno밖에 없으므로 자연 조인 가능 */
+
+select cno, avg(finterm) from student join enrol on student.sno = enrol.sno where dept = '컴퓨터' group by cno;
+
+select sname 이름, cname 과목명, midterm + finterm 중간기말합계 from (student s natural join enrol e) join course c on e.cno = c.cno;
+
+select * from student join enrol on student.sno = enrol.sno;
 
 commit;
 
