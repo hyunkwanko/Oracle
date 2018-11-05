@@ -181,3 +181,32 @@ commit;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create or replace procedure print_hello (p1 in nvarchar2)
+is
+begin
+    DBMS_OUTPUT.put_line('Hello world! :' || p1);
+
+end;
+/ /* 반드시 슬래쉬 추가 */
+
+set SERVEROUTPUT ON
+
+call print_hello('Foo');
+
+
+
