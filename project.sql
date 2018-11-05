@@ -157,7 +157,24 @@ select cno, avg(finterm) from student join enrol on student.sno = enrol.sno wher
 
 select sname 이름, cname 과목명, midterm + finterm 중간기말합계 from (student s natural join enrol e) join course c on e.cno = c.cno;
 
-select * from student join enrol on student.sno = enrol.sno;
+select * from student left outer join enrol on student.sno = enrol.sno; /* 왼쪽의 테이블을 한 번은 출력해줘라 */
+select * from student right outer join enrol on student.sno = enrol.sno; /* 오른쪽 테이블을 한 번은 출력해줘라 */
+select * from student full outer join enrol on student.sno = enrol.sno; /* 양쪽 테이블을 한 번은 출력해줘라 */
+
+select * from student, enrol where student.sno = enrol.sno;
+
+select sname from student left outer join enrol on student.sno = enrol.sno where e.sno is null;
+select sno from enrol;
+
+select * from student where sno not in (select sno from enrol);
+
+insert into student values(600, '홍길동', 3, 'IT');
+insert into course valuse('T301', '컴퓨터구조', 3, 'IT', '김택진');
+
+select cname from enrol right outer join course on enrol.cno = course.cno where enrol.cno is null;
+
+select cno from enrol;
+select * from course where cno not in (select cno from enrol);
 
 commit;
 
