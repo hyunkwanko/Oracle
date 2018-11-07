@@ -44,17 +44,50 @@ execute refresh_st_dept; /* execute를 해야 전체적으로 업데이트된다
 
 select * from user_procedures; /* 사용자가 정의한 프로시절들 */ /* All_OBJECTS는 함부로 하면 안된다. */
 
+create or replace function to_str(year NUMBER)
+return nvarchar2
+is
+    str nvarchar2(10);
+begin
+    case year
+    when 1 then str:='Fresh Man';
+    when 2 then str:='Sophomore';
+    when 3 then str:='Junior';
+    when 4 then str:='Senior';
+    else str:='???';
+    end case;
+    return str;
+end;
+/
+
+select sno, sname, to_str(year) from student;
 
 
+/* PL/SQL 문 */
+var str_val nvarchar2(10);
+execute :str_val :=to_str(1);
+print str_val;
 
 
+select * from student;
 
+execute refresh_st_dept;
 
+select * from st_dept;
 
+insert into student values(100, '나수영', 3, '컴퓨터');
 
+create or replace trigger tg_refresh_st_dept /* 자동적으로 업데이트 */
+after
+    insert or delete or update of dept on student /* 추가, 삭제, 업데이트 시 실행해라 */
+begin
+    refresh_st_dept; /* 저장프로시저 호출! execute 키워드 불필요 */
+end;
+/
 
-
-
+insert into student values(700, '고현관', 3, 'IT');
+select * from student;
+select * from st_dept;
 
 
 
