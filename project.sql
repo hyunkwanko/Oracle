@@ -199,13 +199,16 @@ commit;
 create or replace procedure print_hello (p1 in nvarchar2)
 is
 begin
-    DBMS_OUTPUT.put_line('Hello world! :' || p1);
+DBMS_OUTPUT.put_line('Hello world! :' || p1);
 
 end;
-/ /* 반드시 슬래쉬 추가 */
+/
+/* 반드시 슬래쉬 추가 */
 
 set SERVEROUTPUT ON
 
+
+execute print_hello('Foo');
 call print_hello('Foo');
 
 
