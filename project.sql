@@ -213,3 +213,12 @@ call print_hello('Foo');
 
 
 
+
+
+
+
+
+
+select * from (student natural join enrol) join course on enrol.cno = course.cno where sname='정기태';
+
+
