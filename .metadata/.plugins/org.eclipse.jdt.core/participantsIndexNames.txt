@@ -7,3 +7,5 @@ INDEX VERSION 1.131
 /JSP/src
 /Users/khk/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1990820219.index
 /JSP/src
+/Users/khk/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1831746853.index
+/FAN/src
