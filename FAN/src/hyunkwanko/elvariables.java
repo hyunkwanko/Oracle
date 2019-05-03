@@ -30,17 +30,28 @@ public class elvariables extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { // MVC의 Controller를 만드는 과정
-		request.setAttribute("attr1", "EL_value1");
+		Message msg = new Message(); // Bean 객체 사용
+		msg.setCode(5);
+		msg.setMessage("Requset Message");
+		request.setAttribute("msg1", msg);
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("attr2", "EL_value2");
+//		Message msg2 = new Message(); // 세
+//		msg2.setCode(7);
+//		msg2.setMessage("Session Message");
+//		request.getSession().setAttribute("msg1", msg2);
+
 		
-		ServletContext application = request.getServletContext();
-		application.setAttribute("attr3", "EL_value3");
-		
-		request.setAttribute("dupname", "value_request");
-		session.setAttribute("dupname", "value_session");
-		application.setAttribute("dupname", "value_application");
+//		request.setAttribute("attr1", "EL_value1");
+//		
+//		HttpSession session = request.getSession();
+//		session.setAttribute("attr2", "EL_value2");
+//		
+//		ServletContext application = request.getServletContext();
+//		application.setAttribute("attr3", "EL_value3");
+//		
+//		request.setAttribute("dupname", "value_request");
+//		session.setAttribute("dupname", "value_session");
+//		application.setAttribute("dupname", "value_application");
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/show-elvariables.jsp"); // 이 jsp가 화면 디자인을 보여준다.
 		dispatcher.forward(request, response); // 화면을 실행하라.

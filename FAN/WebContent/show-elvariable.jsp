@@ -8,9 +8,9 @@
 <title>EL Variables</title>
 </head>
 <body>
-<ul>
-	<li> ${msg1.code} ${msg1.message}
-</ul>
+	<h1>
+		${msg1.code} ${msg1.message}
+	</h1>
 
 </body>
 </html>
