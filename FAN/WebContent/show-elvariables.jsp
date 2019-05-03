@@ -9,7 +9,8 @@
 </head>
 <body>
 <ul>
-	<li> ${msg1.code} ${msg1.message}
+	<%-- <li> ${msg1.code} ${msg1.message} --%>
+	<li> Employee : ${emp.name.firstName} ${emp.name.lastName}
 </ul>
 
 </body>
