@@ -9,16 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <!-- <security-constraint>
-    <web-resource-collection>
-      <web-resource-name>hyunkwan</web-resource-name>
-      <url-pattern>/*</url-pattern>
-    </web-resource-collection>
-    <auth-constraint>
-      <role-name>manager</role-name>
-      <role-name>executive</role-name>
-    </auth-constraint>
-  </security-constraint> -->
   <login-config>
     <auth-method>BASIC</auth-method>
     <form-login-config>
