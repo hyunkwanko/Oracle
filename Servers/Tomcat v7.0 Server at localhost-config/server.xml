@@ -108,7 +108,7 @@
 				<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
 				
-			<Context docBase="FAN" path="/FAN" reloadable="true" source="org.eclipse.jst.jee.server:FAN"/></Host>
+			<Context docBase="Web" path="/Web" reloadable="true" source="org.eclipse.jst.jee.server:Web"/></Host>
 		</Engine>
 	</Service>
 </Server>
