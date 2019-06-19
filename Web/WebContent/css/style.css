@@ -154,7 +154,6 @@ a:hover {
 /* line 82, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_common.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #2c3033;
-  font-family: "Cardo", serif;
 }
 
 /* line 86, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_common.scss */
@@ -3498,7 +3497,7 @@ ul {
 .food_menu .single_food_item .media-body h5 {
   font-size: 20px;
   font-weight: 700;
-  color: #ff6426;
+  color: #FF6F61;
   margin-top: 20px;
 }
 
