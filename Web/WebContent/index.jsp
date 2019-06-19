@@ -13,7 +13,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" style="font-size: 2.25rem;" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" style="font-size: 2.25rem;" href="index.jsp"> <img src="img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="menu_btn" style="margin-right: 10px;">
+                        <div class="menu_btn" style="margin: 0 20px;">
                             <a href="#" class="btn_1 d-none d-sm-block">Login</a>
                         </div>
                         <div class="menu_btn">
