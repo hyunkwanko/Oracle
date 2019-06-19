@@ -5,7 +5,7 @@
 		<div class="row align-items-center">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg navbar-light">
-					<a class="navbar-brand" href="index.html"> <img
+					<a class="navbar-brand" href="index.jsp"> <img
 						src="img/logo.png" alt="logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
