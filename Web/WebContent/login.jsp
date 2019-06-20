@@ -22,9 +22,9 @@
 						href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<span>or use your email for registration</span> 
-				<input name="a" type="text" placeholder="Name" /> 
-				<input name="b" type="text" placeholder="ID" /> 
-				<input name="c" type="password" placeholder="Password" /> 
+				<input name="username" type="text" placeholder="Name" /> 
+				<input name="userid" type="text" placeholder="ID" /> 
+				<input name="passwd" type="password" placeholder="Password" /> 
 				<input style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #FF4B2B; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in; width: 50%"
 					type="submit" value="Sign Up" />
 			</form>
