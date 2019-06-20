@@ -3498,6 +3498,8 @@ ul {
   font-weight: 700;
   color: #FF6F61;
   margin-top: 20px;
+  padding-right: 30px;
+  float: right;
 }
 
 @media (max-width: 576px) {

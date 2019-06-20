@@ -42,12 +42,8 @@
                             </ul>
                         </div>
                         <div class="menu_btn" style="margin: 0 20px;">
-                            <a href="#" class="btn_1 d-none d-sm-block">Login</a>
+                            <a href="login.jsp" class="btn_1 d-none d-sm-block">Login & Sign up</a>
                         </div>
-                        <div class="menu_btn">
-                            <a href="#" class="btn_1 d-none d-sm-block">Sign Up</a>
-                        </div>
-
                     </nav>
                 </div>
             </div>
@@ -67,10 +63,10 @@
                             <p>도움이 될 만한 사람과 그 일을 함께 하라. <br>누군가와 함께 하면 혼자 하는 것보다 효과적이고 포기하지 않는다.</p>
                             <div class="banner_btn">
                                 <div class="banner_btn_iner">
-                                    <a href="#" class="btn_2">Study List <img src="img/icon/left_1.svg" alt=""></a>
+                                    <a href="study.jsp" class="btn_2">Study List <img src="img/icon/left_1.svg" alt=""></a>
                                 </div>
-                                <!-- <a href="https://www.youtube.com/watch?v=pBFQdxA-apI" class="popup-youtube video_popup">
-                                    <span><img src="img/icon/play.svg" alt=""></span> </a> -->
+                                <a href="https://www.youtube.com/watch?v=pBFQdxA-apI" class="popup-youtube video_popup">
+                                    <span><img src="img/icon/play.svg" alt=""></span> </a>
                             </div>
                         </div>
                     </div>
