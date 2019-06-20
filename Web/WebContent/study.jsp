@@ -56,7 +56,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_1.png" class="mr-3" alt="...">
+                                        <img src="img/food_menu/single_food_6.png" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Web Develop Study</h3>
                                             <p>JSP를 통한 Web Develop Study 모집!</p>
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                     <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_2.png" class="mr-3" alt="...">
+                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
                                         <div class="media-body align-self-center">
                                             <h3>Web Develop Study</h3>
                                             <p>JSP를 통한 Web Develop Study 모집!</p>

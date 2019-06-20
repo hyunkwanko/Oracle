@@ -14,17 +14,19 @@
 <body>
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">
-			<form action="#">
+			<form action="lib/login_process.jsp" method="post">
 				<h1>Create Account</h1>
 				<div class="social-container">
 					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a> <a
 						href="#" class="social"><i class="fab fa-google-plus-g"></i></a> <a
 						href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
-				<span>or use your email for registration</span> <input type="text"
-					placeholder="Name" /> <input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
-				<button>Sign Up</button>
+				<span>or use your email for registration</span> 
+				<input name="a" type="text" placeholder="Name" /> 
+				<input name="b" type="text" placeholder="ID" /> 
+				<input name="c" type="password" placeholder="Password" /> 
+				<input style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #FF4B2B; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in; width: 50%"
+					type="submit" value="Sign Up" />
 			</form>
 		</div>
 		<div class="form-container sign-in-container">
@@ -35,10 +37,12 @@
 						href="#" class="social"><i class="fab fa-google-plus-g"></i></a> <a
 						href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
-				<span>or use your account</span> <input type="email"
-					placeholder="Email" /> <input type="password"
-					placeholder="Password" /> <a href="#">Forgot your password?</a>
-				<button>Sign In</button>
+				<span>or use your account</span> <input type="text" placeholder="ID" />
+				<input type="password" placeholder="Password" /> 
+				<a href="#">Forgot your password?</a>
+				<input
+					style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #FF4B2B; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in; width: 50%"
+					type="submit" value="Sign In" />
 			</form>
 		</div>
 		<div class="overlay-container">
