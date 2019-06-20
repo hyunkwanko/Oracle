@@ -17,9 +17,9 @@
 			<form action="lib/login_process.jsp" method="post">
 				<h1>Create Account</h1>
 				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a> <a
-						href="#" class="social"><i class="fab fa-google-plus-g"></i></a> <a
-						href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<span>or use your email for registration</span> 
 				<input name="username" type="text" placeholder="Name" /> 
@@ -30,18 +30,18 @@
 			</form>
 		</div>
 		<div class="form-container sign-in-container">
-			<form action="#">
+			<form action="lib/sign_in_process.jsp" method="post">
 				<h1>Sign in</h1>
 				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a> <a
-						href="#" class="social"><i class="fab fa-google-plus-g"></i></a> <a
-						href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a> 
+					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
-				<span>or use your account</span> <input type="text" placeholder="ID" />
-				<input type="password" placeholder="Password" /> 
+				<span>or use your account</span>
+				<input name="userid" type="text" placeholder="ID" />
+				<input name="passwd" type="password" placeholder="Password" /> 
 				<a href="#">Forgot your password?</a>
-				<input
-					style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #FF4B2B; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in; width: 50%"
+				<input style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #FF4B2B; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in; width: 50%"
 					type="submit" value="Sign In" />
 			</form>
 		</div>
@@ -49,8 +49,7 @@
 			<div class="overlay">
 				<div class="overlay-panel overlay-left">
 					<h1>Welcome!</h1>
-					<p>To keep connected with us please login with your personal
-						info</p>
+					<p>To keep connected with us please login with your personal info</p>
 					<button class="ghost" id="signIn">Sign In</button>
 				</div>
 				<div class="overlay-panel overlay-right">
