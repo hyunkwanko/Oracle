@@ -43,11 +43,33 @@
                         </div>
                         <%
 							String userid = request.getParameter("id");
-                        	System.out.println(userid);
+                 
+                        	System.out.println("null");
+                        	
+                        	if (userid == null) {
+                        %>
+                        		<div class="menu_btn" style="margin: 0 20px;">
+	                                <a href="login.jsp" class="btn_1 d-none d-sm-block">Login & Sign up</a>
+	                            </div>
+	                    <%
+                        	} else if (userid.equals("admin")){
+                        %>
+                        		<div class="menu_btn" style="margin: 0">
+	                                <a "href="index.jsp" class="genric-btn danger circle">관리자</a>
+	                            </div>
+                        		<div class="menu_btn" style="margin: 0 20px;">
+	                                <a href="index.jsp" class="btn_1 d-none d-sm-block">Logout</a>
+	                            </div>
+	                    <%
+                        	} else {
+                        %>
+                        		<div class="menu_btn" style="margin: 0 20px;">
+	                                <a href="index.jsp" class="btn_1 d-none d-sm-block">Logout</a>
+	                            </div>
+	                    <%	
+                        	}
 						%>
-                        <div class="menu_btn" style="margin: 0 20px;">
-                            <a href="login.jsp" class="btn_1 d-none d-sm-block">Login & Sign up</a>
-                        </div>
+                        
                     </nav>
                 </div>
             </div>
