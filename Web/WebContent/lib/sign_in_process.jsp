@@ -1,36 +1,52 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>  
-
+  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+</head>
+<body>
 <%
 	// request 객체로부터 파라미터를 가져온다.
-	String username = request.getParameter("username");
 	String userid = request.getParameter("userid");
 	String passwd = request.getParameter("passwd");
 %>
 
-<%
+<% 
+	Class.forName("oracle.jdbc.OracleDriver");
+	Connection conn = DriverManager.getConnection( 
+			"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
+			"db201312097", 
+			"201312097");
+	
 	PreparedStatement st = null;
 	
-	try{
-		Class.forName("oracle.jdbc.OracleDriver");
-		Connection conn = DriverManager.getConnection( 
-				"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
-				"db201312097", 
-				"201312097");
-		st = conn.prepareStatement("insert into member values(?,?,?)"); // PreparedStatement 객체 생성(쿼리 생성)
-		st.setString(1, userid);
-		st.setString(2, passwd);
-		st.setString(3, username);
-		st.executeUpdate(); // 쿼리(sql) 실행
-	}catch(Exception e){
-		e.getStackTrace();
-	}finally{
-		try{ // 연결된 DB를 종료
-			if(st != null)
-				st.close();
-		}catch(Exception e1){
-			e1.getStackTrace();
-		}
+	if (userid == null || userid.trim().equals("")) { // 인자가 없거나 공백인 경우 
+		// redirect 404.html
+	} else { // 정상적인 값이 전달된 경우 
+		st = conn.prepareStatement("select * from member where id='" + userid + "'");
 	}
+	
+	ResultSet rs = st.executeQuery();
+	if (rs.next()){
+		String name = rs.getString("name");
+		String id = rs.getString("id");
+		String password = rs.getString("password");
+		if (password.equals(passwd)){
+			response.sendRedirect("../index.jsp?id=" + id);
+		} else {
+			response.sendRedirect("../404.html?");
+		}
+		
+	}
+	
+	rs.close();
+	st.close();
+	conn.close();
 %>
+
+</body>
+</html>

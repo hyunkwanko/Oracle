@@ -18,7 +18,7 @@
 				"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
 				"db201312097", 
 				"201312097");
-		st = conn.prepareStatement("insert into member values(?,?,?)"); // PreparedStatement 객체 생성(쿼리 생성)
+		st = conn.prepareStatement("INSERT INTO MEMBER values(?,?,?)"); // PreparedStatement 객체 생성(쿼리 생성)
 		st.setString(1, userid);
 		st.setString(2, passwd);
 		st.setString(3, username);
