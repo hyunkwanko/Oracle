@@ -179,13 +179,13 @@
                 <div class="col-sm-8 col-lg-4">
                     <div class="about_text">
                         <h5>Our History</h5>
-                        <h2>Where The Food’s As Good
-                            As The Root Beer.</h2>
-                        <h4>Satisfying people hunger for simple pleasures</h4>
-                        <p>May over was. Be signs two. Spirit. Brought said dry own firmament lesser best sixth deep
-                            abundantly bearing, him, gathering you
-                            blessed bearing he our position best ticket in month hole deep </p>
-                        <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
+                        <h2>We want to study together!</h2>
+                        <h4>A time when teamwork is important</h4>
+                        <p>무엇이든 공부를 함께 하고싶을때, 마땅히 구할곳이 없을때
+                           우리의 웹 서비를 활용하여 좋은 사람들과 함께 스터디해요.
+   						   프로그래밍 언어, 함께 듣는 수업, 리눅스, 운영체제 등
+    					   다양한 분야의 많은 스터디를 검색해보세요!</p>
+                        <a href="study.jsp" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
                     </div>
                 </div>
             </div>
