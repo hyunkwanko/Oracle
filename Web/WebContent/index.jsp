@@ -44,7 +44,7 @@
                         <%
 							String userid = request.getParameter("id");
                  
-                        	System.out.println("null");
+                        	// System.out.println("null");
                         	
                         	if (userid == null) {
                         %>
@@ -150,18 +150,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 d-none d-sm-block d-lg-none">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/food_item/food_item_1.png" alt="">
-                        </div>
-                        <div class="single_blog_text">
-                            <h3>Cremy Noodles</h3>
-                            <p>Was brean shed moveth day yielding tree yielding day were female and </p>
-                            <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -178,7 +166,7 @@
                 </div>
                 <div class="col-sm-8 col-lg-4">
                     <div class="about_text">
-                        <h5>Our History</h5>
+                        <h5>Our Goal</h5>
                         <h2>We want to study together!</h2>
                         <h4>A time when teamwork is important</h4>
                         <p>무엇이든 공부를 함께 하고싶을때, 마땅히 구할곳이 없을때
