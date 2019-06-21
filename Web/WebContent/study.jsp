@@ -283,8 +283,7 @@
                             </div>
                         	<p style="text-align:center;"><a href="#" class="genric-btn info-border">More</a></p>
                         </div>
-                        <div class="tab-pane fade single-member" id="Sneaks" role="tabpanel"
-                            aria-labelledby="Sneaks-tab">
+                        <div class="tab-pane fade single-member" id="Sneaks" role="tabpanel" aria-labelledby="Sneaks-tab">
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="single_food_item media">

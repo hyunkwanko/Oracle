@@ -54,8 +54,8 @@
 	                    <%
                         	} else if (userid.equals("admin")){
                         %>
-                        		<div class="menu_btn" style="margin: 0">
-	                                <a "href="index.jsp" class="genric-btn danger circle">관리자</a>
+                        		<div style="margin: 0">
+	                                <a href="administrator.jsp" class="genric-btn danger circle">관리자</a>
 	                            </div>
                         		<div class="menu_btn" style="margin: 0 20px;">
 	                                <a href="index.jsp" class="btn_1 d-none d-sm-block">Logout</a>
@@ -120,8 +120,8 @@
                             <img src="img/food_item/food_item_1.png" alt="">
                         </div>
                         <div class="single_blog_text">
-                            <h3>Indian Burger</h3>
-                            <p>Was brean shed moveth day yielding tree yielding day were female and </p>
+                            <h3>JSP를 통한 웹 개발 스터디</h3>
+                            <p>JSP로 반응형 웹 사이트 함께 개발하실분 구합니다! 송하주 교수님의 인터넷DB응용 수강하신분 우대합니다. </p>
                             <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
                         </div>
                     </div>
@@ -132,8 +132,8 @@
                             <img src="img/food_item/food_item_2.png" alt="">
                         </div>
                         <div class="single_blog_text">
-                            <h3>Cremy Noodles</h3>
-                            <p>Was brean shed moveth day yielding tree yielding day were female and </p>
+                            <h3>인공지능 딥러닝 스터디</h3>
+                            <p>인공지능을 이해하고 딥러닝을 활용해서 영상 처리 프로그램 개발하실 구합니다! Python 사용합니다.</p>
                             <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
                         </div>
                     </div>
@@ -144,8 +144,8 @@
                             <img src="img/food_item/food_item_3.png" alt="">
                         </div>
                         <div class="single_blog_text">
-                            <h3>Honey Meat</h3>
-                            <p>Was brean shed moveth day yielding tree yielding day were female and </p>
+                            <h3>알고리즘 스터디</h3>
+                            <p>방학동안 알고리즘 문제 같이 풀며 공부하실분 구합니다! 못해도 상관없어요! </p>
                             <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
                         </div>
                     </div>

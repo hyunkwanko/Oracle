@@ -27,7 +27,7 @@
 								aria-haspopup="true" aria-expanded="false"> Blog </a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 									<a class="dropdown-item" href="blog.jsp">Blog</a> <a
-										class="dropdown-item" href="single-blog.html">Single blog</a>
+										class="dropdown-item" href="single-blog.jsp">Single blog</a>
 									<a class="dropdown-item" href="elements.html">Elements</a>
 								</div></li>
 						</ul>
