@@ -33,7 +33,7 @@
 						</ul>
 					</div>
 					<div class="menu_btn">
-						<a href="#" class="single_page_btn d-none d-sm-block">Register</a>
+						<a href="write.jsp" class="single_page_btn d-none d-sm-block">Write</a>
 					</div>
 				</nav>
 			</div>

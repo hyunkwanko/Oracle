@@ -64,6 +64,8 @@
 							<div style="text-align:center;">
 								<input style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #ff6426; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in;"
 						type="submit" value="Complete" />
+								<input style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #ff6426; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in;"
+								type="submit" value="Complete" />
 							</div>
 						</form>
 					</div>
@@ -84,9 +86,7 @@
 										</div>
 									</div>
 								</div>
-								<button
-									class="button rounded-0 primary-bg text-white w-100 btn_4"
-									type="submit">Search</button>
+								<button class="button rounded-0 primary-bg text-white w-100 btn_4" type="submit">Search</button>
 							</form>
 						</aside>
 

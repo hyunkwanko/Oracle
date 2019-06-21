@@ -118,27 +118,27 @@
                             <h4 class="widget_title">Category</h4>
                             <ul class="list cat-list">
                                 <li>
-                                    <a href="#" class="d-flex">
+                                    <a href="blog.jsp?list=Web" class="d-flex">
                                         <p>Web</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="d-flex">
+                                    <a href="blog.jsp?list=Algorithm" class="d-flex">
                                         <p>Algorithm</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="d-flex">
+                                    <a href="blog.jsp?list=Security" class="d-flex">
                                         <p>Security</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="d-flex">
+                                    <a href="blog.jsp?list=Network" class="d-flex">
                                         <p>Network</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="d-flex">
+                                    <a href="blog.jsp?list=Mobile" class="d-flex">
                                         <p>Mobile</p>
                                     </a>
                                 </li>
