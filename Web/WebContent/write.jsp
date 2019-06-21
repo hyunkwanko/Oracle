@@ -33,7 +33,7 @@
 			<div class="row">
 				<div class="col-lg-8 posts-list">
 					<div class="single-post">
-						<form action="#">
+						<form action="lib/write_process.jsp" method="post">
 							<div class="input-group-icon">
 								<div class="icon"><i class="fas fa-chevron-circle-right"></i></div>
 								<input type="text" name="title" placeholder="Title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title'"
@@ -47,7 +47,7 @@
 							<div class="input-group-icon mt-10">
 								<div class="icon"><i class="fas fa-list-ul"></i></div>
 								<div class="form-select" id="default-select">
-									<select>
+									<select name="category">
 										<option value="1">Category</option>
 										<option value="1">Web</option>
 										<option value="1">Algorithm</option>

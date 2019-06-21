@@ -2,13 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>  
   
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Test</title>
-</head>
-<body>
 <%
 	// request 객체로부터 파라미터를 가져온다.
 	String userid = request.getParameter("userid");
@@ -47,6 +40,3 @@
 	st.close();
 	conn.close();
 %>
-
-</body>
-</html>
