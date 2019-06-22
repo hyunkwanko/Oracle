@@ -25,7 +25,7 @@
 			st = conn.prepareStatement("SELECT * FROM MEMBER WHERE ID = '" + userid + "'");
 			ResultSet rs = st.executeQuery(); // 주로 SELECT문에 사용
 			if (!rs.next()){
-				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval, ?, ?, ?)"); // PreparedStatement 객체 생성(쿼리 생성)
+				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval, ?, ?, ?)");
 				st.setString(1, userid);
 				st.setString(2, passwd);
 				st.setString(3, username);
