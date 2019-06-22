@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
 
 <!doctype html>
 <html lang="en">
@@ -53,42 +54,52 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active single-member" id="Special" role="tabpanel" aria-labelledby="Special-tab">
                             <div class="row">
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_6.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>고현관</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Deep Learning</h3>
-                                            <p>오픈 소스를 활용한 딥러닝 예제 학습 Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Crawling</h3>
-                                            <p>웹 크롤링을 통한 빅데이터 분석 Study 모집!</p>
-                                            <h5>전호범</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_5.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Algorithm</h3>
-                                            <p>알고리즘 과제 Study 모집!</p>
-                                            <h5>이선경</h5>
-                                        </div>
-                                    </div>
-                                </div>
+	                            <% 
+	                            	request.setCharacterEncoding("UTF-8");
+									Class.forName("oracle.jdbc.OracleDriver");
+									Connection conn = DriverManager.getConnection( 
+											"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
+											"db201312097", 
+											"201312097");
+								%>
+								<%
+									PreparedStatement st = null;
+									int i = 1;
+									
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									
+									ResultSet rs = st.executeQuery();
+									while (rs.next()){
+										String ID = rs.getString("ID");
+										String TITLE = rs.getString("TITLE");
+										String SUBTITLE = rs.getString("SUBTITLE");
+										String NAME = rs.getString("NAME");
+										
+										if (i % 2 == 1){
+								%>
+											<div class="col-sm-6 col-lg-6">
+								<%
+										}
+								%>
+										<div class="single_food_item media">
+	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
+	                                        <div class="media-body align-self-center">
+	                                            <h3><%=TITLE %></h3>
+	                                            <p><%=SUBTITLE %></p>
+	                                            <h5><%=NAME %></h5>
+	                                        </div>
+	                                    </div>
+								<%		
+										if (i % 2 == 0){
+								%>
+											</div>
+								<%
+										}
+										i++;
+										
+										if (i == 5) break;
+									}
+								%>
                             </div>
                         	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
                         </div>

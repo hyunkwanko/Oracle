@@ -3,7 +3,7 @@
 <%@ page import="java.sql.*" %>  
 
 <%
-	// 한글 처
+	// 한글 처리
 	request.setCharacterEncoding("UTF-8");
 
 	String title = request.getParameter("title");
