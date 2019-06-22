@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+
 <!doctype html>
 <html lang="en">
 
@@ -31,38 +33,39 @@
 							<img class="img-fluid" src="img/blog/single_blog_2.png" alt="">
 						</div>
 						<div class="blog_details">
-							<h2>Second divided from form fish beast made every of seas
-								all gathered us saying he our</h2>
-							<p class="excert">MCSE boot camps have its supporters and its
-								detractors. Some people do not understand why you should have to
-								spend money on boot camp when you can get the MCSE study
-								materials yourself at a fraction of the camp price. However, who
-								has the willpower</p>
-							<p>MCSE boot camps have its supporters and its detractors.
-								Some people do not understand why you should have to spend money
-								on boot camp when you can get the MCSE study materials yourself
-								at a fraction of the camp price. However, who has the willpower
-								to actually sit through a self-imposed MCSE training. who has
-								the willpower to actually</p>
-							<div class="quote-wrapper">
-								<div class="quotes">MCSE boot camps have its supporters
-									and its detractors. Some people do not understand why you
-									should have to spend money on boot camp when you can get the
-									MCSE study materials yourself at a fraction of the camp price.
-									However, who has the willpower to actually sit through a
-									self-imposed MCSE training.</div>
-							</div>
-							<p>MCSE boot camps have its supporters and its detractors.
-								Some people do not understand why you should have to spend money
-								on boot camp when you can get the MCSE study materials yourself
-								at a fraction of the camp price. However, who has the willpower
-							</p>
-							<p>MCSE boot camps have its supporters and its detractors.
-								Some people do not understand why you should have to spend money
-								on boot camp when you can get the MCSE study materials yourself
-								at a fraction of the camp price. However, who has the willpower
-								to actually sit through a self-imposed MCSE training. who has
-								the willpower to actually</p>
+						<%
+							String title = request.getParameter("title");
+						
+							request.setCharacterEncoding("UTF-8");
+							Class.forName("oracle.jdbc.OracleDriver");
+							Connection conn = DriverManager.getConnection(
+									"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
+									"db201312097",
+									"201312097");
+						%>
+						<%
+							PreparedStatement st = null;
+
+							st = conn.prepareStatement("SELECT * FROM STUDY WHERE title = '" + title + "'");
+							
+							ResultSet rs = st.executeQuery();
+							while (rs.next()) {
+								String TITLE = rs.getString("TITLE");
+								String SUBTITLE = rs.getString("SUBTITLE");
+								String CONTENT = rs.getString("CONTENT");
+								String MONTH = rs.getString("MONTH");
+								String DAY = rs.getString("DAY");
+								String TIME = rs.getString("TIME");
+						%>
+								<h2><%=TITLE %></h2>
+								<%=CONTENT %>
+						<%
+							}
+							
+							rs.close();
+							st.close();
+							conn.close();
+						%>
 						</div>
 					</div>
 					<div class="navigation-top">
@@ -73,20 +76,6 @@
 							</p>
 						</div>
 					</div>
-					<div class="blog-author">
-						<div class="media align-items-center">
-							<img src="img/blog/author.png" alt="">
-							<div class="media-body">
-								<a href="#">
-									<h4>Harvard milan</h4>
-								</a>
-								<p>Second divided from form fish beast made. Every of seas
-									all gathered use saying you're, he our dominion twon Second
-									divided from</p>
-							</div>
-						</div>
-					</div>
-					
 				</div>
 				<div class="col-lg-4">
 					<div class="blog_right_sidebar">

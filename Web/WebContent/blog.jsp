@@ -43,7 +43,7 @@
 						<%
 							PreparedStatement st = null;
 
-							st = conn.prepareStatement("SELECT * FROM STUDY WHERE list = '" + list + "'");
+							st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = '" + list + "'");
 							
 							ResultSet rs = st.executeQuery();
 							while (rs.next()) {
@@ -51,24 +51,27 @@
 								String SUBTITLE = rs.getString("SUBTITLE");
 								String MONTH = rs.getString("MONTH");
 								String DAY = rs.getString("DAY");
+								String TIME = rs.getString("TIME");
+								String NAME = rs.getString("NAME");
 						%>
 								<article class="blog_item">
 									<div class="blog_item_img">
-										<img class="card-img rounded-0" src="img/blog/single_blog_2.png"
-											alt=""> <a href="#" class="blog_item_date">
+										<img class="card-img rounded-0" src="img/blog/single_blog_2.png" alt=""> 
+										<span class="blog_item_date">
 											<h3><%=DAY %></h3>
 											<p style="text-align: center;"><%=MONTH %></p>
-										</a>
+										</span>
 									</div>
 		
 									<div class="blog_details">
-										<a class="d-inline-block" href="single-blog.html">
+										<a class="d-inline-block" href="single-blog.jsp">
 											<h2><%=TITLE %></h2>
 										</a>
 										<p><%=SUBTITLE %></p>
 										<ul class="blog-info-link">
-											<li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-											<li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
+											<li><i class="fas fa-align-left"></i> <%=list %></li>
+											<li><i class="far fa-clock"></i> <%=TIME %></li>
+											<li><i class="fas fa-user-check"></i> <%=NAME %></li>
 										</ul>
 									</div>
 								</article>

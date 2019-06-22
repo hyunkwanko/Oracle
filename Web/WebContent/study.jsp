@@ -109,7 +109,7 @@
 									st = null;
                                 	rs = null;
 									i = 1;
-									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Database'");
 									
 									rs = st.executeQuery();
 									while (rs.next()){
@@ -144,7 +144,7 @@
 									}
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=Database" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Launch" role="tabpanel" aria-labelledby="Launch-tab">
                             <div class="row">
@@ -153,7 +153,7 @@
                                 	rs = null;
 									i = 1;
 									
-									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Security'");
 									
 									rs = st.executeQuery();
 									while (rs.next()){
@@ -188,7 +188,7 @@
 									}
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=Security" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Dinner" role="tabpanel" aria-labelledby="Dinner-tab">
                             <div class="row">
@@ -197,7 +197,7 @@
                                 	rs = null;
 									i = 1;
 									
-									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Algorithm'");
 									
 									rs = st.executeQuery();
 									while (rs.next()){
@@ -232,7 +232,7 @@
 									}
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=Algorithm" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Sneaks" role="tabpanel" aria-labelledby="Sneaks-tab">
                             <div class="row">
@@ -241,7 +241,7 @@
                                 	rs = null;
 									i = 1;
 									
-									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'AI'");
 									
 									rs = st.executeQuery();
 									while (rs.next()){
@@ -280,7 +280,7 @@
 									conn.close();
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=AI" class="genric-btn info-border">More</a></p>
                         </div>
                     </div>
                 </div>
