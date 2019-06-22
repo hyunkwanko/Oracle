@@ -49,7 +49,7 @@
 							st = conn.prepareStatement("SELECT * FROM STUDY WHERE title = '" + title + "'");
 							
 							ResultSet rs = st.executeQuery();
-							while (rs.next()) {
+							if (rs.next()) {
 								String TITLE = rs.getString("TITLE");
 								String SUBTITLE = rs.getString("SUBTITLE");
 								String CONTENT = rs.getString("CONTENT");

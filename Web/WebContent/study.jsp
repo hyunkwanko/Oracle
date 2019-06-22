@@ -84,8 +84,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><%=TITLE %></h3>
-	                                            <p><%=SUBTITLE %></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -127,8 +127,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><%=TITLE %></h3>
-	                                            <p><%=SUBTITLE %></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -171,8 +171,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><%=TITLE %></h3>
-	                                            <p><%=SUBTITLE %></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -215,8 +215,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><%=TITLE %></h3>
-	                                            <p><%=SUBTITLE %></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -259,8 +259,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><%=TITLE %></h3>
-	                                            <p><%=SUBTITLE %></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
