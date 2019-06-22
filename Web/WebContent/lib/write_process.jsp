@@ -27,71 +27,25 @@
 				"db201312097", 
 				"201312097");
 		
-		if (userid == null || userid.trim().equals("")) {
+		if (id == null || id.trim().equals("")) {
 			response.sendRedirect("../404.html");
 		} else {
-			st = conn.prepareStatement("SELECT * FROM MEMBER WHERE ID = '" + userid + "'");
-			ResultSet rs = st.executeQuery(); // 주로 SELECT문에 사용
-			if (!rs.next()){
-				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval,?,?,?)"); // PreparedStatement 객체 생성(쿼리 생성)
-				st.setString(1, userid);
-				st.setString(2, passwd);
-				st.setString(3, username);
-				st.executeUpdate(); // 주로 INSERT, UPDATE, DELETE문에 사용
-			} else {
-				response.sendRedirect("../404.html");
-			}
+			st = conn.prepareStatement("INSERT INTO STUDY values (STUDY_SEQ.nextval, ?, ?, ?, ?, ?);");
+			st.setString(1, id);
+			st.setString(2, title);
+			st.setString(3, subtitle);
+			st.setString(4, content);
+			st.setString(5, list);
+			st.executeUpdate();
 		}
-	}catch(Exception e){
+	} catch(Exception e) {
 		e.getStackTrace();
-	}finally{
-		try{ // 연결된 DB를 종료
+	} finally {
+		try {
 			if(st != null)
 				st.close();
-		}catch(Exception e1){
+		} catch(Exception e1) {
 			e1.getStackTrace();
 		}
 	}
 %>
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-	<meta charset="utf-8">
-	<title>PKNU IT</title>
-	<link rel="stylesheet" href="../css/login.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-</head>
-
-<body>
-	<div class="container" id="container">
-		<div class="form-container sign-in-container">
-			<form action="sign_in_process.jsp" method="post">
-				<h1>Sign in</h1>
-				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a> 
-					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-				</div>
-				<span>or use your account</span>
-				<input name="userid" type="text" placeholder="ID" />
-				<input name="passwd" type="password" placeholder="Password" /> 
-				<a href="#">Forgot your password?</a>
-				<input style="border-radius: 20px; border: 1px solid #FF4B2B; background-color: #FF4B2B; color: #FFFFFF; font-size: 12px; font-weight: bold; padding: 12px 45px; letter-spacing: 1px; text-transform: uppercase; transition: transform 80ms ease-in; width: 50%"
-					type="submit" value="Sign In" />
-			</form>
-		</div>
-		
-		<div class="overlay-container">
-			<div class="overlay">
-				<div class="overlay-panel overlay-right">
-					<h1>Hello, <%=username %>!</h1>
-					<p>Enter your personal details and start journey with us</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-<script src="../js/login.js"></script>
-</html>
-

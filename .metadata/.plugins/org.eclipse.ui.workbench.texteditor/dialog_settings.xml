@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=".genric-btn.danger"/>
+		<item key="selection" value="study"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="study"/>
+			<item value="form-select"/>
+			<item value="family"/>
+			<item value="font"/>
+			<item value="first_name"/>
+			<item value="Form"/>
 			<item value=".genric-btn.danger"/>
 			<item value="danger"/>
 			<item value="button"/>
@@ -17,12 +23,6 @@
 			<item value="html"/>
 			<item value="h1, h2, h3, h4, h5, h6"/>
 			<item value="index"/>
-			<item value="index.html"/>
-			<item value="timeout"/>
-			<item value="port"/>
-			<item value="Pattern"/>
-			<item value="Demo"/>
-			<item value="forname"/>
 		</list>
 		<list key="replacehistory">
 		</list>

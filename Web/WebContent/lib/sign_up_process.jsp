@@ -25,7 +25,7 @@
 			st = conn.prepareStatement("SELECT * FROM MEMBER WHERE ID = '" + userid + "'");
 			ResultSet rs = st.executeQuery(); // 주로 SELECT문에 사용
 			if (!rs.next()){
-				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval,?,?,?)"); // PreparedStatement 객체 생성(쿼리 생성)
+				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval, ?, ?, ?)"); // PreparedStatement 객체 생성(쿼리 생성)
 				st.setString(1, userid);
 				st.setString(2, passwd);
 				st.setString(3, username);
@@ -34,13 +34,13 @@
 				response.sendRedirect("../404.html");
 			}
 		}
-	}catch(Exception e){
+	} catch(Exception e) {
 		e.getStackTrace();
-	}finally{
-		try{ // 연결된 DB를 종료
+	} finally {
+		try {
 			if(st != null)
 				st.close();
-		}catch(Exception e1){
+		} catch(Exception e1) {
 			e1.getStackTrace();
 		}
 	}
