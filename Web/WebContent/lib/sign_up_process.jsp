@@ -18,24 +18,20 @@
 				"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
 				"db201312097", 
 				"201312097");
+		
 		if (userid == null || userid.trim().equals("")) {
 			response.sendRedirect("../404.html");
 		} else {
 			st = conn.prepareStatement("SELECT * FROM MEMBER WHERE ID = '" + userid + "'");
 			ResultSet rs = st.executeQuery(); // 주로 SELECT문에 사용
-			if (rs.next()){
-				String name = rs.getString("NAME");
-				String id = rs.getString("ID");
-				
-				if (username.equals(name) || userid.equals(id)){
-					response.sendRedirect("../404.html");
-				} else {
-					st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval,?,?,?)"); // PreparedStatement 객체 생성(쿼리 생성)
-					st.setString(1, userid);
-					st.setString(2, passwd);
-					st.setString(3, username);
-					st.executeUpdate(); // 주로 INSERT, UPDATE, DELETE문에 사용
-				}
+			if (!rs.next()){
+				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval,?,?,?)"); // PreparedStatement 객체 생성(쿼리 생성)
+				st.setString(1, userid);
+				st.setString(2, passwd);
+				st.setString(3, username);
+				st.executeUpdate(); // 주로 INSERT, UPDATE, DELETE문에 사용
+			} else {
+				response.sendRedirect("../404.html");
 			}
 		}
 		

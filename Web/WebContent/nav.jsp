@@ -33,7 +33,18 @@
 						</ul>
 					</div>
 					<div class="menu_btn">
-						<a href="write.jsp" class="single_page_btn d-none d-sm-block">Write</a>
+						<%
+							String userid = request.getParameter("id");
+							if (userid == null) {
+		                %>
+                                <a href="404.html" class="single_page_btn d-none d-sm-block">Write</a>
+                        <%
+		                        } else {
+		                %>
+		                		<a href="write.jsp?id=<%=userid %>" class="single_page_btn d-none d-sm-block">Write</a>
+		                <%
+		                        }
+		                %>
 					</div>
 				</nav>
 			</div>

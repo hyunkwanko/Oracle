@@ -31,7 +31,7 @@
 		if (password.equals(passwd)){
 			response.sendRedirect("../index.jsp?id=" + id);
 		} else {
-			response.sendRedirect("../404.html?");
+			response.sendRedirect("../404.html");
 		}
 		
 	}

@@ -27,7 +27,21 @@
                                     <a class="nav-link" href="index.jsp">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="study.jsp">Study</a>
+                                <%
+									String userid = request.getParameter("id");
+		                 
+		                        	// System.out.println("null");
+		                        	
+		                        	if (userid == null) {
+		                        %>
+                                    	<a class="nav-link" href="study.jsp">Study</a>
+                                <%
+		                        	} else {
+		                        %>
+		                        		<a class="nav-link" href="study.jsp?id=<%=userid %>">Study</a>
+		                        <%
+		                        	}
+		                        %>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,10 +56,6 @@
                             </ul>
                         </div>
                         <%
-							String userid = request.getParameter("id");
-                 
-                        	// System.out.println("null");
-                        	
                         	if (userid == null) {
                         %>
                         		<div class="menu_btn" style="margin: 0 20px;">
@@ -66,7 +76,7 @@
                         		<div class="menu_btn" style="margin: 0 20px;">
 	                                <a href="index.jsp" class="btn_1 d-none d-sm-block">Logout</a>
 	                            </div>
-	                    <%	
+	                    <%
                         	}
 						%>
                         
