@@ -105,165 +105,180 @@
                         </div>
                         <div class="tab-pane fade single-member" id="Breakfast" role="tabpanel" aria-labelledby="Breakfast-tab">
                             <div class="row">
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_6.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_5.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
+                                <%
+									st = null;
+                                	rs = null;
+									i = 1;
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									
+									rs = st.executeQuery();
+									while (rs.next()){
+										String ID = rs.getString("ID");
+										String TITLE = rs.getString("TITLE");
+										String SUBTITLE = rs.getString("SUBTITLE");
+										String NAME = rs.getString("NAME");
+										
+										if (i % 2 == 1){
+								%>
+											<div class="col-sm-6 col-lg-6">
+								<%
+										}
+								%>
+										<div class="single_food_item media">
+	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
+	                                        <div class="media-body align-self-center">
+	                                            <h3><%=TITLE %></h3>
+	                                            <p><%=SUBTITLE %></p>
+	                                            <h5><%=NAME %></h5>
+	                                        </div>
+	                                    </div>
+								<%		
+										if (i % 2 == 0){
+								%>
+											</div>
+								<%
+										}
+										i++;
+										
+										if (i == 5) break;
+									}
+								%>
                             </div>
                         	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Launch" role="tabpanel" aria-labelledby="Launch-tab">
                             <div class="row">
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_6.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_5.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
+                                <%
+									st = null;
+                                	rs = null;
+									i = 1;
+									
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									
+									rs = st.executeQuery();
+									while (rs.next()){
+										String ID = rs.getString("ID");
+										String TITLE = rs.getString("TITLE");
+										String SUBTITLE = rs.getString("SUBTITLE");
+										String NAME = rs.getString("NAME");
+										
+										if (i % 2 == 1){
+								%>
+											<div class="col-sm-6 col-lg-6">
+								<%
+										}
+								%>
+										<div class="single_food_item media">
+	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
+	                                        <div class="media-body align-self-center">
+	                                            <h3><%=TITLE %></h3>
+	                                            <p><%=SUBTITLE %></p>
+	                                            <h5><%=NAME %></h5>
+	                                        </div>
+	                                    </div>
+								<%		
+										if (i % 2 == 0){
+								%>
+											</div>
+								<%
+										}
+										i++;
+										
+										if (i == 5) break;
+									}
+								%>
                             </div>
                         	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Dinner" role="tabpanel" aria-labelledby="Dinner-tab">
                             <div class="row">
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_6.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_5.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
+                                <%
+									st = null;
+                                	rs = null;
+									i = 1;
+									
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									
+									rs = st.executeQuery();
+									while (rs.next()){
+										String ID = rs.getString("ID");
+										String TITLE = rs.getString("TITLE");
+										String SUBTITLE = rs.getString("SUBTITLE");
+										String NAME = rs.getString("NAME");
+										
+										if (i % 2 == 1){
+								%>
+											<div class="col-sm-6 col-lg-6">
+								<%
+										}
+								%>
+										<div class="single_food_item media">
+	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
+	                                        <div class="media-body align-self-center">
+	                                            <h3><%=TITLE %></h3>
+	                                            <p><%=SUBTITLE %></p>
+	                                            <h5><%=NAME %></h5>
+	                                        </div>
+	                                    </div>
+								<%		
+										if (i % 2 == 0){
+								%>
+											</div>
+								<%
+										}
+										i++;
+										
+										if (i == 5) break;
+									}
+								%>
                             </div>
                         	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Sneaks" role="tabpanel" aria-labelledby="Sneaks-tab">
                             <div class="row">
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_6.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-6">
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_4.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                    <div class="single_food_item media">
-                                        <img src="img/food_menu/single_food_5.png" class="mr-3" alt="...">
-                                        <div class="media-body align-self-center">
-                                            <h3>Web Develop Study</h3>
-                                            <p>JSP를 통한 Web Develop Study 모집!</p>
-                                            <h5>이용훈</h5>
-                                        </div>
-                                    </div>
-                                </div>
+                                <%
+									st = null;
+                                	rs = null;
+									i = 1;
+									
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = 'Web'");
+									
+									rs = st.executeQuery();
+									while (rs.next()){
+										String ID = rs.getString("ID");
+										String TITLE = rs.getString("TITLE");
+										String SUBTITLE = rs.getString("SUBTITLE");
+										String NAME = rs.getString("NAME");
+										
+										if (i % 2 == 1){
+								%>
+											<div class="col-sm-6 col-lg-6">
+								<%
+										}
+								%>
+										<div class="single_food_item media">
+	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
+	                                        <div class="media-body align-self-center">
+	                                            <h3><%=TITLE %></h3>
+	                                            <p><%=SUBTITLE %></p>
+	                                            <h5><%=NAME %></h5>
+	                                        </div>
+	                                    </div>
+								<%		
+										if (i % 2 == 0){
+								%>
+											</div>
+								<%
+										}
+										i++;
+										
+										if (i == 5) break;
+									}
+									
+									rs.close();
+									st.close();
+									conn.close();
+								%>
                             </div>
                         	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
                         </div>
