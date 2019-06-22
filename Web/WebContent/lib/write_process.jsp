@@ -3,6 +3,9 @@
 <%@ page import="java.sql.*" %>  
 
 <%
+	// 한글 처
+	request.setCharacterEncoding("UTF-8");
+
 	String title = request.getParameter("title");
 	String subtitle = request.getParameter("subtitle");
 	String content = request.getParameter("content");
@@ -30,7 +33,7 @@
 			st.setString(4, content);
 			st.setString(5, list);
 			st.executeUpdate();
-			response.sendRedirect("../index.jsp");
+			response.sendRedirect("../blog.jsp?list=" + list);
 		}
 	} catch(Exception e) {
 		e.getStackTrace();
