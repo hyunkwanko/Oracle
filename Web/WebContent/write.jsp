@@ -47,13 +47,13 @@
 							<div class="input-group-icon mt-10">
 								<div class="icon"><i class="fas fa-list-ul"></i></div>
 								<div class="form-select" id="default-select">
-									<select name="category">
-										<option value="1">Category</option>
-										<option value="1">Web</option>
-										<option value="1">Algorithm</option>
-										<option value="1">Security</option>
-										<option value="1">Network</option>
-										<option value="1">Mobile</option>
+									<select name="list">
+										<option>Category</option>
+										<option value="Web">Web</option>
+										<option value="Algorithm">Algorithm</option>
+										<option value="Security">Security</option>
+										<option value="Network">Network</option>
+										<option value="Mobile">Mobile</option>
 									</select>
 								</div>
 							</div>
@@ -139,12 +139,13 @@
 	<script id="dsq-count-scr" src="//everyolo.disqus.com/count.js" async></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
     <script>
-        ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+        ClassicEditor.create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
     </script>
+    
+    
 </body>
 
 </html>

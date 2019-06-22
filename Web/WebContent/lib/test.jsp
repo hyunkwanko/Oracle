@@ -32,12 +32,13 @@
 	
 	ResultSet rs = st.executeQuery();
 	while (rs.next()){
-		String name = rs.getString("name");
-		String id = rs.getString("id");
-		String password = rs.getString("password");
+		String MNO = rs.getString("MNO");
+		String ID = rs.getString("ID");
+		String PASSWORD = rs.getString("PASSWORD");
+		String NAME = rs.getString("NAME");
 %>
 
-<tr> <td> <%=name %> <td> <%=id %> <td> <%=password %></tr>
+<tr> <td> <%=MNO %> <td> <%=ID %> <td> <%=PASSWORD %> <td> <%=NAME %></tr>
 <%
 		// System.out.format("%d, %s, %d, %s\n", sno, sname, year, dept);
 	}

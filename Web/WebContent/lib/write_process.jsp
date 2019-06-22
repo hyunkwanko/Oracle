@@ -7,11 +7,12 @@
 	String title = request.getParameter("title");
 	String subtitle = request.getParameter("subtitle");
 	String content = request.getParameter("content");
-	String category = request.getParameter("category");
+	String list = request.getParameter("list");
 	
 	System.out.println(title);
 	System.out.println(subtitle);
 	System.out.println(content);
-	System.out.println(category);
+	System.out.println(list);
 %>
+
 
