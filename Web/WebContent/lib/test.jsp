@@ -11,7 +11,7 @@
 <body>
 
 <table border=1>
-<tr> <th> username <th> userid <th> password</tr>
+<tr> <th> MNO <th> ID <th> PASSWORD <th> NAME</tr>
 
 <% 
 	Class.forName("oracle.jdbc.OracleDriver");
@@ -21,11 +21,10 @@
 			"201312097");
 	String cno = "2";
 	
-	PreparedStatement st;
+	PreparedStatement st = null;
 	
 	if (cno == null || cno.trim().equals("")) { // 인자가 없거나 공백인 경우 
-		st = conn.prepareStatement("select * from student");
-	
+		
 	} else {// 정상적인 값이 전달된 경우 
 		st = conn.prepareStatement("select * from member");
 	}

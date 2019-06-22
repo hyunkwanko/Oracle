@@ -9,10 +9,10 @@
 	String content = request.getParameter("content");
 	String list = request.getParameter("list");
 	
-	System.out.println(title);
+	/* System.out.println(title);
 	System.out.println(subtitle);
 	System.out.println(content);
-	System.out.println(list);
+	System.out.println(list); */
 %>
 
 
