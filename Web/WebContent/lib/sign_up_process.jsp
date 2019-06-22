@@ -34,8 +34,6 @@
 				response.sendRedirect("../404.html");
 			}
 		}
-		
-		
 	}catch(Exception e){
 		e.getStackTrace();
 	}finally{

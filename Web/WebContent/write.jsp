@@ -33,7 +33,10 @@
 			<div class="row">
 				<div class="col-lg-8 posts-list">
 					<div class="single-post">
-						<form action="lib/write_process.jsp" method="post">
+					<%
+						String id = request.getParameter("id");
+					%>
+						<form action="lib/write_process.jsp?id=<%=id %>" method="post">
 							<div class="input-group-icon">
 								<div class="icon"><i class="fas fa-chevron-circle-right"></i></div>
 								<input type="text" name="title" placeholder="Title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title'"
