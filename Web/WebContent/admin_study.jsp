@@ -91,8 +91,8 @@
 						<aside class="single_sidebar_widget post_category_widget">
 							<h4 class="widget_title">Category</h4>
 							<ul class="list cat-list">
-								<li><a href="blog.jsp?list=Web" class="d-flex"><p>Member</p></a></li>
-								<li><a href="blog.jsp?list=Web" class="d-flex"><p>Study</p></a></li>
+								<li><a href="admin_member.jsp" class="d-flex"><p>Member</p></a></li>
+								<li><a href="admin_study.jsp" class="d-flex"><p>Study</p></a></li>
 							</ul>
 						</aside>
 					</div>
