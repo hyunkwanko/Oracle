@@ -6,7 +6,7 @@
 	// 한글 처리
 	request.setCharacterEncoding("UTF-8");
 
-	String SNO = request.getParameter("sno");
+	String MNO = request.getParameter("mno");
 %>
 
 <%
@@ -19,12 +19,12 @@
 				"db201312097", 
 				"201312097");
 		
-		if (SNO == null || SNO.trim().equals("")) {
+		if (MNO == null || MNO.trim().equals("")) {
 			response.sendRedirect("../404.html");
 		} else {
-			st = conn.prepareStatement("DELETE FROM STUDY WHERE SNO = " + SNO);
+			st = conn.prepareStatement("DELETE FROM MEMBER WHERE MNO = " + MNO);
 			st.executeUpdate();
-			response.sendRedirect("../admin_study.jsp");
+			response.sendRedirect("../admin_member.jsp");
 		}
 	} catch(Exception e) {
 		e.getStackTrace();

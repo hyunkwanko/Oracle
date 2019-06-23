@@ -28,7 +28,7 @@
 			st = conn.prepareStatement("SELECT * FROM MEMBER WHERE ID = '" + userid + "'");
 			ResultSet rs = st.executeQuery(); // 주로 SELECT문에 사용
 			if (!rs.next()){
-				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval, ?, ?, ?)");
+				st = conn.prepareStatement("INSERT INTO MEMBER values(MEM_SEQ.nextval, ?, ?, ?, to_char(sysdate,'YYYY'), to_char(sysdate,'MM'), to_char(sysdate,'DD'), to_char(sysdate,'HH24:MI'))");
 				st.setString(1, userid);
 				st.setString(2, passwd);
 				st.setString(3, username);

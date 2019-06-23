@@ -36,9 +36,10 @@
 								<div class="progress-table">
 									<div class="table-head">
 										<div class="serial">#</div>
-										<div class="country">NAME</div>
+										<div class="visit">NAME</div>
 										<div class="visit">ID</div>
-										<div class="percentage">가입일</div>
+										<div class="country">가입일</div>
+										<div class="visit"></div>
 									</div>
 									<%
 										request.setCharacterEncoding("UTF-8");
@@ -55,14 +56,20 @@
 										int i = 1;
 										ResultSet rs = st.executeQuery();
 										while (rs.next()) {
+											String MNO = rs.getString("MNO");
 											String NAME = rs.getString("NAME");
 											String ID = rs.getString("ID");
+											String YEAR = rs.getString("YEAR");
+											String MONTH = rs.getString("MONTH");
+											String DAY = rs.getString("DAY");
+											String TIME = rs.getString("TIME");
 									%>
 											<div class="table-row">
 												<div class="serial"><%=i %></div>
-												<div class="country"><%=NAME %></div>
+												<div class="visit"><%=NAME %></div>
 												<div class="visit"><%=ID %></div>
-												<div class="percentage">1234</div>
+												<div class="country"><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></div>
+												<div class="visit"><a href="lib/member_delete_process.jsp?mno=<%=MNO %>" class="genric-btn danger">Delete</a></div>
 											</div>
 									<%
 											i++;
