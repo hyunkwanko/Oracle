@@ -75,8 +75,8 @@
 										<ul class="blog-info-link">
 											<li><i class="fas fa-align-left"></i> <%=list %></li>
 											<li><i class="far fa-clock"></i> <%=TIME %></li>
-											<li><i class="fas fa-user-check"></i> <%=NAME %></li>
-											<li><i class="fas fa-user-check"></i> <%=VISIT %></li>
+											<li><i class="fas fa-user-edit"></i> <%=NAME %></li>
+											<li><i class="fas fa-eye"></i> <%=VISIT %></li>
 										</ul>
 									</div>
 								</article>
