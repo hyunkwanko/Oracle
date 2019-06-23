@@ -74,7 +74,7 @@
 												<div class="visit"><%=ID %></div>
 												<div class="visit">NAME</div>
 												<div class="country"><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></div>
-												<div class="visit"><a href="lib/member_delete_process.jsp?sno=<%=SNO %>" class="genric-btn danger">Delete</a></div>
+												<div class="visit"><a href="lib/study_delete_process.jsp?sno=<%=SNO %>" class="genric-btn danger">Delete</a></div>
 											</div>
 									<%
 											i++;
