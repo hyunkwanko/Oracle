@@ -68,7 +68,7 @@
 									</div>
 		
 									<div class="blog_details">
-										<a class="d-inline-block" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>">
+										<a class="d-inline-block" href="lib/visit_process.jsp?sno=<%=SNO %>&mno=<%=MNO %>&visit=<%=VISIT %>">
 											<h2><%=TITLE %></h2>
 										</a>
 										<p><%=SUBTITLE %></p>
