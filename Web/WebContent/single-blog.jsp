@@ -98,66 +98,8 @@
 							</form>
 						</aside>
 
-						<aside class="single_sidebar_widget post_category_widget">
-							<h4 class="widget_title">Category</h4>
-							<ul class="list cat-list">
-								<li><a href="#" class="d-flex">
-										<p>Web</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Algorithm</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Security</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Network</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Mobile</p>
-								</a></li>
-							</ul>
-						</aside>
-
-						<aside class="single_sidebar_widget popular_post_widget">
-							<h3 class="widget_title">Recent Post</h3>
-							<div class="media post_item">
-								<img src="img/post/post_1.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>January 12, 2019</p>
-								</div>
-							</div>
-							<div class="media post_item">
-								<img src="img/post/post_2.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>02 Hours ago</p>
-								</div>
-							</div>
-							<div class="media post_item">
-								<img src="img/post/post_3.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>03 Hours ago</p>
-								</div>
-							</div>
-							<div class="media post_item">
-								<img src="img/post/post_4.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>01 Hours ago</p>
-								</div>
-							</div>
-						</aside>
+						<%@ include file="./category.jsp"%>
+						<%@ include file="./recent_post.jsp"%>
 					</div>
 				</div>
 			</div>
