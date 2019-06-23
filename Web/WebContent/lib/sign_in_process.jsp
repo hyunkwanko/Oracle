@@ -3,6 +3,9 @@
 <%@ page import="java.sql.*" %>  
   
 <%
+	//한글 처리
+	request.setCharacterEncoding("UTF-8");
+
 	// request 객체로부터 파라미터를 가져온다.
 	String userid = request.getParameter("userid");
 	String passwd = request.getParameter("passwd");
@@ -20,7 +23,7 @@
 	if (userid == null || userid.trim().equals("")) { // 인자가 없거나 공백인 경우 
 		// redirect 404.html
 	} else { // 정상적인 값이 전달된 경우 
-		st = conn.prepareStatement("select * from member where id='" + userid + "'");
+		st = conn.prepareStatement("SELECT * FROM MEMBER where id='" + userid + "'");
 	}
 	
 	ResultSet rs = st.executeQuery();

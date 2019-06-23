@@ -3,6 +3,9 @@
 <%@ page import="java.sql.*" %>  
 
 <%
+	//한글 처리
+	request.setCharacterEncoding("UTF-8");
+
 	// request 객체로부터 파라미터를 가져온다.
 	String username = request.getParameter("username");
 	String userid = request.getParameter("userid");

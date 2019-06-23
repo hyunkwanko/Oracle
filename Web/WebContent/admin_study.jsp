@@ -58,6 +58,7 @@
 										int i = 1;
 										ResultSet rs = st.executeQuery();
 										while (rs.next()) {
+											String SNO = rs.getString("SNO");
 											String TITLE = rs.getString("TITLE");
 											String ID = rs.getString("ID");
 											String LIST = rs.getString("LIST");
@@ -73,7 +74,7 @@
 												<div class="visit"><%=ID %></div>
 												<div class="visit">NAME</div>
 												<div class="country"><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></div>
-												<div class="visit"><a href="#" class="genric-btn danger">Danger</a></div>
+												<div class="visit"><a href="lib/member_delete_process.jsp?sno=<%=SNO %>" class="genric-btn danger">Delete</a></div>
 											</div>
 									<%
 											i++;
