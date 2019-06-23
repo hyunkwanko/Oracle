@@ -26,7 +26,7 @@
 		if (id == null || id.trim().equals("")) {
 			response.sendRedirect("../404.html");
 		} else {
-			st = conn.prepareStatement("INSERT INTO STUDY values (STUDY_SEQ.nextval, ?, ?, ?, ?, ?, to_char(sysdate,'YYYY'), to_char(sysdate,'MM'), to_char(sysdate,'DD'), to_char(sysdate,'HH24:MI'))");
+			st = conn.prepareStatement("INSERT INTO STUDY values (STUDY_SEQ.nextval, ?, ?, ?, ?, ?, to_char(sysdate,'YYYY'), to_char(sysdate,'MM'), to_char(sysdate,'DD'), to_char(sysdate,'HH24:MI'), 0)");
 			st.setString(1, id);
 			st.setString(2, title);
 			st.setString(3, subtitle);

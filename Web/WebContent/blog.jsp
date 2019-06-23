@@ -42,17 +42,21 @@
 						%>
 						<%
 							PreparedStatement st = null;
-
+							
 							st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = '" + list + "'");
 							
 							ResultSet rs = st.executeQuery();
 							while (rs.next()) {
+								String SNO = rs.getString("SNO");
+								String MNO = rs.getString("MNO");
 								String TITLE = rs.getString("TITLE");
 								String SUBTITLE = rs.getString("SUBTITLE");
 								String MONTH = rs.getString("MONTH");
 								String DAY = rs.getString("DAY");
 								String TIME = rs.getString("TIME");
 								String NAME = rs.getString("NAME");
+								String VISIT = rs.getString("VISIT");
+								
 						%>
 								<article class="blog_item">
 									<div class="blog_item_img">
@@ -64,7 +68,7 @@
 									</div>
 		
 									<div class="blog_details">
-										<a class="d-inline-block" href="single-blog.jsp">
+										<a class="d-inline-block" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>">
 											<h2><%=TITLE %></h2>
 										</a>
 										<p><%=SUBTITLE %></p>
@@ -72,6 +76,7 @@
 											<li><i class="fas fa-align-left"></i> <%=list %></li>
 											<li><i class="far fa-clock"></i> <%=TIME %></li>
 											<li><i class="fas fa-user-check"></i> <%=NAME %></li>
+											<li><i class="fas fa-user-check"></i> <%=VISIT %></li>
 										</ul>
 									</div>
 								</article>

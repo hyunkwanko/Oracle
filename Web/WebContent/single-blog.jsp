@@ -34,8 +34,9 @@
 						</div>
 						<div class="blog_details">
 						<%
-							String title = request.getParameter("title");
-						
+							String SNO = request.getParameter("sno");
+							String MNO = request.getParameter("mno");
+							
 							request.setCharacterEncoding("UTF-8");
 							Class.forName("oracle.jdbc.OracleDriver");
 							Connection conn = DriverManager.getConnection(
@@ -46,18 +47,16 @@
 						<%
 							PreparedStatement st = null;
 
-							st = conn.prepareStatement("SELECT * FROM STUDY WHERE title = '" + title + "'");
+							st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND MNO = " + MNO + " AND SNO = " + SNO);
 							
 							ResultSet rs = st.executeQuery();
 							if (rs.next()) {
 								String TITLE = rs.getString("TITLE");
 								String SUBTITLE = rs.getString("SUBTITLE");
 								String CONTENT = rs.getString("CONTENT");
-								String MONTH = rs.getString("MONTH");
-								String DAY = rs.getString("DAY");
-								String TIME = rs.getString("TIME");
 						%>
 								<h2><%=TITLE %></h2>
+								<p><%=SUBTITLE %></p>
 								<%=CONTENT %>
 						<%
 							}
