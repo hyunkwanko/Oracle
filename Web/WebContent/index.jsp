@@ -65,7 +65,7 @@
                         	} else if (userid.equals("admin")){
                         %>
                         		<div style="margin: 0">
-	                                <a href="administrator.jsp" class="genric-btn danger circle">관리자</a>
+	                                <a href="admin_member.jsp" class="genric-btn danger circle">관리자</a>
 	                            </div>
                         		<div class="menu_btn" style="margin: 0 20px;">
 	                                <a href="index.jsp" class="btn_1 d-none d-sm-block">Logout</a>
