@@ -777,7 +777,7 @@ ul {
 
 /* line 10, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_blog.scss */
 .blog_area a {
-  color: #666666 !important;
+  /* color: #666666 !important; */
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;

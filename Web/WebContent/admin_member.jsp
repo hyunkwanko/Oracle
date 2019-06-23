@@ -28,7 +28,7 @@
 	<section class="blog_area section_padding">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 mb-5 mb-lg-0">
+				<div class="col-lg-9 mb-5 mb-lg-0">
 					<div class="blog_left_sidebar">
 						<div class="section-top-border">
 							<h3 class="mb-30">Member Table</h3>
@@ -77,7 +77,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-3">
 					<div class="blog_right_sidebar">
 						<aside class="single_sidebar_widget post_category_widget">
 							<h4 class="widget_title">Category</h4>
