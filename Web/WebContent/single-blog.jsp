@@ -60,10 +60,6 @@
 								<%=CONTENT %>
 						<%
 							}
-							
-							rs.close();
-							st.close();
-							conn.close();
 						%>
 						</div>
 					</div>
@@ -78,28 +74,62 @@
 				</div>
 				<div class="col-lg-4">
 					<div class="blog_right_sidebar">
-						<aside class="single_sidebar_widget search_widget">
-							<form action="#">
-								<div class="form-group">
-									<div class="input-group mb-3">
-										<input type="text" class="form-control"
-											placeholder='Search Keyword' onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Search Keyword'">
-										<div class="input-group-append">
-											<button class="btn" type="button">
-												<i class="ti-search"></i>
-											</button>
-										</div>
-									</div>
-								</div>
-								<button
-									class="button rounded-0 primary-bg text-white w-100 btn_4"
-									type="submit">Search</button>
-							</form>
+						<aside class="single_sidebar_widget post_category_widget">
+							<h4 class="widget_title">Category</h4>
+							<ul class="list cat-list">
+								<%
+									st = null;
+									
+									st = conn.prepareStatement("SELECT * FROM LIST");
+									
+									rs = st.executeQuery();
+									while (rs.next()){
+										String TITLE = rs.getString("TITLE");
+								%>
+										<li><a href="blog.jsp?list=<%=TITLE %>" class="d-flex"><p><%=TITLE %></p></a></li>
+								<%
+									}
+								%>
+							</ul>
 						</aside>
+						
+						<aside class="single_sidebar_widget popular_post_widget">
+							<h3 class="widget_title">Recent Post</h3>
+							<ul class="list cat-list">
+								<%
+									st = null;
+						
+									st = conn.prepareStatement("SELECT * FROM STUDY");
+									int i = 0;
+						
+									rs = st.executeQuery();
+									while (rs.next()) {
+										String TITLE = rs.getString("TITLE");
+										String YEAR = rs.getString("YEAR");
+										String MONTH = rs.getString("MONTH");
+										String DAY = rs.getString("DAY");
+										String TIME = rs.getString("TIME");
+								%>
+										<div class="media post_item">
+											<img src="img/post/post_1.png" alt="post">
+											<div class="media-body">
+												<a href="single-blog.html">
+													<h3><%=TITLE %></h3>
+												</a>
+												<p><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></p>
+											</div>
+										</div>
+								<%
+										if (i == 3) break;
+										else i++;
+									}
 
-						<%@ include file="./category.jsp"%>
-						<%@ include file="./recent_post.jsp"%>
+									rs.close();
+									st.close();
+									conn.close();
+								%>
+							</ul>
+						</aside>
 					</div>
 				</div>
 			</div>

@@ -82,10 +82,6 @@
 								</article>
 						<%
 							}
-							
-							rs.close();
-							st.close();
-							conn.close();
 						%>
 						
 						<nav class="blog-pagination justify-content-center d-flex">
@@ -129,62 +125,58 @@
 						<aside class="single_sidebar_widget post_category_widget">
 							<h4 class="widget_title">Category</h4>
 							<ul class="list cat-list">
-								<li><a href="blog.jsp?list=Web" class="d-flex">
-										<p>Web</p>
-								</a></li>
-								<li><a href="blog.jsp?list=Algorithm" class="d-flex">
-										<p>Algorithm</p>
-								</a></li>
-								<li><a href="blog.jsp?list=Security" class="d-flex">
-										<p>Security</p>
-								</a></li>
-								<li><a href="blog.jsp?list=Network" class="d-flex">
-										<p>Network</p>
-								</a></li>
-								<li><a href="blog.jsp?list=Mobile" class="d-flex">
-										<p>Mobile</p>
-								</a></li>
+								<%
+									st = null;
+									
+									st = conn.prepareStatement("SELECT * FROM LIST");
+									
+									rs = st.executeQuery();
+									while (rs.next()){
+										String TITLE = rs.getString("TITLE");
+								%>
+										<li><a href="blog.jsp?list=<%=TITLE %>" class="d-flex"><p><%=TITLE %></p></a></li>
+								<%
+									}
+								%>
 							</ul>
 						</aside>
 
 						<aside class="single_sidebar_widget popular_post_widget">
 							<h3 class="widget_title">Recent Post</h3>
-							<div class="media post_item">
-								<img src="img/post/post_1.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>January 12, 2019</p>
-								</div>
-							</div>
-							<div class="media post_item">
-								<img src="img/post/post_2.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>02 Hours ago</p>
-								</div>
-							</div>
-							<div class="media post_item">
-								<img src="img/post/post_3.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>03 Hours ago</p>
-								</div>
-							</div>
-							<div class="media post_item">
-								<img src="img/post/post_4.png" alt="post">
-								<div class="media-body">
-									<a href="single-blog.html">
-										<h3>God IT</h3>
-									</a>
-									<p>01 Hours ago</p>
-								</div>
-							</div>
+							<ul class="list cat-list">
+								<%
+									st = null;
+						
+									st = conn.prepareStatement("SELECT * FROM STUDY");
+									int i = 0;
+						
+									rs = st.executeQuery();
+									while (rs.next()) {
+										String TITLE = rs.getString("TITLE");
+										String YEAR = rs.getString("YEAR");
+										String MONTH = rs.getString("MONTH");
+										String DAY = rs.getString("DAY");
+										String TIME = rs.getString("TIME");
+								%>
+										<div class="media post_item">
+											<img src="img/post/post_1.png" alt="post">
+											<div class="media-body">
+												<a href="single-blog.html">
+													<h3><%=TITLE %></h3>
+												</a>
+												<p><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></p>
+											</div>
+										</div>
+								<%
+										if (i == 3) break;
+										else i++;
+									}
+
+									rs.close();
+									st.close();
+									conn.close();
+								%>
+							</ul>
 						</aside>
 					</div>
 				</div>
