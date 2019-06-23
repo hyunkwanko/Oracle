@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="관리자"/>
+		<item key="selection" value="userid"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="userid"/>
+			<item value="System"/>
+			<item value="lib"/>
+			<item value=".blog_area a"/>
+			<item value="genric-btn danger"/>
+			<item value="button"/>
 			<item value="관리자"/>
 			<item value="test"/>
 			<item value="study"/>
@@ -17,19 +23,13 @@
 			<item value="first_name"/>
 			<item value="Form"/>
 			<item value=".genric-btn.danger"/>
-			<item value="danger"/>
-			<item value="button"/>
-			<item value="buttom"/>
-			<item value="input"/>
-			<item value=".food_menu .single_food_item .media-body h5"/>
-			<item value="html"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="692"/>
-		<item key="DIALOG_Y_ORIGIN" value="253"/>
+		<item key="DIALOG_X_ORIGIN" value="-234"/>
+		<item key="DIALOG_Y_ORIGIN" value="244"/>
 		<item key="DIALOG_WIDTH" value="294"/>
 		<item key="DIALOG_HEIGHT" value="408"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

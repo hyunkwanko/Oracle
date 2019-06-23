@@ -43,7 +43,7 @@
 						<%
 							PreparedStatement st = null;
 							
-							st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.list = '" + list + "'");
+							st = conn.prepareStatement("SELECT * FROM STUDY,MEMBER WHERE member.id = study.id AND study.list = '" + list + "'");
 							
 							ResultSet rs = st.executeQuery();
 							while (rs.next()) {
