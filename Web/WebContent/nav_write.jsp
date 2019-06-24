@@ -53,25 +53,9 @@
 						</ul>
 					</div>
 
-					<%
-                        if (userid == null) {
-                    %>
-						<div class="menu_btn" style="margin: 0 20px;">
-							<a href="login.jsp" class="single_page_btn d-none d-sm-block">Login & Sign up</a>
-						</div>
-					<%
-                        } else {
-                    %>
-						<div style="margin: 0">
-							<a href="write.jsp?id=<%=userid %>"
-								class="single_page_btn d-none d-sm-block">Write</a>
-						</div>
-						<div style="margin: 0 20px;">
-							<a href="study.jsp" class="single_page_btn d-none d-sm-block">Logout</a>
-						</div>
-					<%
-                        }
-					%>
+					<div style="margin: 0 20px;">
+						<a href="study.jsp" class="single_page_btn d-none d-sm-block">Logout</a>
+					</div>
 				</nav>
 			</div>
 		</div>

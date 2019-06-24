@@ -56,6 +56,8 @@
                             <div class="row">
 	                            <% 
 	                            	request.setCharacterEncoding("UTF-8");
+	                            	String id = request.getParameter("id");
+	                            	
 									Class.forName("oracle.jdbc.OracleDriver");
 									Connection conn = DriverManager.getConnection( 
 											"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
@@ -103,7 +105,7 @@
 									}
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Web" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=Web?id=<%=id %>" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Breakfast" role="tabpanel" aria-labelledby="Breakfast-tab">
                             <div class="row">
@@ -148,7 +150,7 @@
 									}
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Database" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=Database?id=<%=id %>" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Launch" role="tabpanel" aria-labelledby="Launch-tab">
                             <div class="row">
@@ -194,7 +196,7 @@
 									}
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Security" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=Security?id=<%=id %>" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Dinner" role="tabpanel" aria-labelledby="Dinner-tab">
                             <div class="row">
@@ -240,7 +242,7 @@
 									}
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=Algorithm" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=Algorithm?id=<%=id %>" class="genric-btn info-border">More</a></p>
                         </div>
                         <div class="tab-pane fade single-member" id="Sneaks" role="tabpanel" aria-labelledby="Sneaks-tab">
                             <div class="row">
@@ -290,7 +292,7 @@
 									conn.close();
 								%>
                             </div>
-                        	<p style="text-align:center;"><a href="blog.jsp?list=AI" class="genric-btn info-border">More</a></p>
+                        	<p style="text-align:center;"><a href="blog.jsp?list=AI?id=<%=id %>" class="genric-btn info-border">More</a></p>
                         </div>
                     </div>
                 </div>

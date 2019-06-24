@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+
 <!doctype html>
 <html lang="en">
 	<style>
@@ -11,7 +13,7 @@
 <%@ include file="./head.jsp"%>
 
 <body>
-	<%@ include file="./nav.jsp"%>
+	<%@ include file="./nav_write.jsp"%>
 
 	<!-- breadcrumb start-->
 	<section class="breadcrumb breadcrumb_bg">

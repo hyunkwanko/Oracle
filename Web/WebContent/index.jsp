@@ -93,7 +93,7 @@
                         	} else {
                         %>
                         		<div style="margin: 0">
-	                                <a href="mypage.jsp?id=<%=userid %>" class="btn_1 d-none d-sm-block">마이페이지</a>
+	                                <a href="mypage.jsp?id=<%=userid %>" class="genric-btn info circle">마이페이지</a>
 	                            </div>
                         		<div class="menu_btn" style="margin: 0 20px;">
 	                                <a href="index.jsp" class="btn_1 d-none d-sm-block">Logout</a>
