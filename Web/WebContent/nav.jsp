@@ -41,15 +41,6 @@
 		                        	}
 		                        %>
 							<li class="nav-item"><a class="nav-link" href="study.jsp">Study</a></li>
-							<li class="nav-item dropdown"><a
-								class="nav-link dropdown-toggle" href="blog.jsp"
-								id="navbarDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false"> Blog </a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="blog.jsp">Blog</a> <a
-										class="dropdown-item" href="single-blog.jsp">Single blog</a>
-									<a class="dropdown-item" href="elements.html">Elements</a>
-								</div></li>
 						</ul>
 					</div>
 

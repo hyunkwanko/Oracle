@@ -62,7 +62,7 @@
 			                        	}
 			                        %>
                                 </li>
-                                <li class="nav-item dropdown">
+                                <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Blog
                                     </a>
@@ -71,7 +71,7 @@
                                         <a class="dropdown-item" href="single-blog.jsp">Single blog</a>
                                         <a class="dropdown-item" href="elements.html">Elements</a>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <%
@@ -121,7 +121,7 @@
                             <p>도움이 될 만한 사람과 그 일을 함께 하라. <br>누군가와 함께 하면 혼자 하는 것보다 효과적이고 포기하지 않는다.</p>
                             <div class="banner_btn">
                                 <div class="banner_btn_iner">
-                                    <a href="study.jsp" class="btn_2">Study List <img src="img/icon/left_1.svg" alt=""></a>
+                                    <a href="study.jsp?id=<%=userid %>" class="btn_2">Study List <img src="img/icon/left_1.svg" alt=""></a>
                                 </div>
                                 <a href="https://www.youtube.com/watch?v=pBFQdxA-apI" class="popup-youtube video_popup">
                                     <span><img src="img/icon/play.svg" alt=""></span> </a>
