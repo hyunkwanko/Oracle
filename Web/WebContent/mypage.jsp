@@ -31,13 +31,14 @@
 				<div class="col-lg-8 mb-5 mb-lg-0">
 					<div class="blog_left_sidebar">
 						<div class="section-top-border">
-							<h3 class="mb-30">Study Table</h3>
+							<h3 class="mb-30">My Study</h3>
 							<div class="progress-table-wrap">
 								<div class="progress-table">
 									<div class="table-head">
 										<div class="serial">#</div>
 										<div class="country">TITLE</div>
 										<div class="visit">LIST</div>
+										<div class="country">생성일</div>
 									</div>
 									<%
 										String id = request.getParameter("id");
@@ -53,8 +54,8 @@
 										PreparedStatement st = null;
 			
 										
-										st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = '" + id + "' AND study.id = '" + id + "'");
-										/* System.out.println("SELECT * FROM MEMBER,STUDY WHERE member.id = '" + id + "' AND study.id = '" + id + "'"); */
+										st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND study.id = '" + id + "'");
+										
 										int i = 1;
 										ResultSet rs = st.executeQuery();
 										while (rs.next()) {
@@ -63,11 +64,16 @@
 											String TITLE = rs.getString("TITLE");
 											String ID = rs.getString("ID");
 											String LIST = rs.getString("LIST");
+											String YEAR = rs.getString("YEAR");
+											String MONTH = rs.getString("MONTH");
+											String DAY = rs.getString("DAY");
+											String TIME = rs.getString("TIME");
 									%>
 											<div class="table-row">
 												<div class="serial"><%=i %></div>
-												<div class="country"><a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></div>
+												<div class="country"><a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=ID %>"><%=TITLE %></a></div>
 												<div class="visit"><%=LIST %></div>
+												<div class="country"><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></div>
 											</div>
 									<%
 											i++;
@@ -80,17 +86,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="blog_right_sidebar">
-						<aside class="single_sidebar_widget post_category_widget">
-							<h4 class="widget_title">Category</h4>
-							<ul class="list cat-list">
-								<li><a href="admin_member.jsp" class="d-flex"><p>Member</p></a></li>
-								<li><a href="admin_study.jsp" class="d-flex"><p>Study</p></a></li>
-							</ul>
-						</aside>
 					</div>
 				</div>
 			</div>
