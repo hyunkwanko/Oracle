@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
 
 <!DOCTYPE html>
 
@@ -127,42 +128,53 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/food_item/food_item_1.png" alt="">
-                        </div>
-                        <div class="single_blog_text">
-                            <h3>JSP를 통한 웹 개발 스터디</h3>
-                            <p>JSP로 반응형 웹 사이트 함께 개발하실분 구합니다! 송하주 교수님의 인터넷DB응용 수강하신분 우대합니다. </p>
-                            <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/food_item/food_item_2.png" alt="">
-                        </div>
-                        <div class="single_blog_text">
-                            <h3>인공지능 딥러닝 스터디</h3>
-                            <p>인공지능을 이해하고 딥러닝을 활용해서 영상 처리 프로그램 개발하실 구합니다! Python 사용합니다.</p>
-                            <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/food_item/food_item_3.png" alt="">
-                        </div>
-                        <div class="single_blog_text">
-                            <h3>알고리즘 스터디</h3>
-                            <p>방학동안 알고리즘 문제 같이 풀며 공부하실분 구합니다! 못해도 상관없어요! </p>
-                            <a href="#" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
+           		<%
+					String list = request.getParameter("list");
+						
+					request.setCharacterEncoding("UTF-8");
+					Class.forName("oracle.jdbc.OracleDriver");
+					Connection conn = DriverManager.getConnection(
+						"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
+						"db201312097",
+						"201312097"
+					);
+				%>
+				<%
+					PreparedStatement st = null;
+					int i = 1;
+							
+					st = conn.prepareStatement("SELECT * FROM STUDY,MEMBER WHERE member.id = study.id ORDER BY VISIT DESC");
+							
+					ResultSet rs = st.executeQuery();
+					while (rs.next()) {
+						String SNO = rs.getString("SNO");
+						String MNO = rs.getString("MNO");
+						String TITLE = rs.getString("TITLE");
+						String SUBTITLE = rs.getString("SUBTITLE");
+						String VISIT = rs.getString("VISIT");
+						
+				%>
+						<div class="col-sm-6 col-lg-4">
+		                    <div class="single_blog_item">
+		                        <div class="single_blog_img">
+		                            <img src="img/food_item/food_item_<%=i %>.png" alt="">
+		                        </div>
+		                        <div class="single_blog_text">
+		                            <h3><%=TITLE %></h3>
+		                            <p><%=SUBTITLE %></p>
+		                            <a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
+		                        </div>
+		                    </div>
+		                </div>	
+				<%
+						if (i == 3) break;
+						else i++;
+					}
+					
+					rs.close();
+					st.close();
+					conn.close();
+				%>
             </div>
         </div>
     </section>

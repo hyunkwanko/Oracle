@@ -70,6 +70,8 @@
 									
 									ResultSet rs = st.executeQuery();
 									while (rs.next()){
+										String SNO = rs.getString("SNO");
+										String MNO = rs.getString("MNO");
 										String ID = rs.getString("ID");
 										String TITLE = rs.getString("TITLE");
 										String SUBTITLE = rs.getString("SUBTITLE");
@@ -84,8 +86,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -113,6 +115,8 @@
 									
 									rs = st.executeQuery();
 									while (rs.next()){
+										String SNO = rs.getString("SNO");
+										String MNO = rs.getString("MNO");
 										String ID = rs.getString("ID");
 										String TITLE = rs.getString("TITLE");
 										String SUBTITLE = rs.getString("SUBTITLE");
@@ -127,8 +131,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -157,6 +161,8 @@
 									
 									rs = st.executeQuery();
 									while (rs.next()){
+										String SNO = rs.getString("SNO");
+										String MNO = rs.getString("MNO");
 										String ID = rs.getString("ID");
 										String TITLE = rs.getString("TITLE");
 										String SUBTITLE = rs.getString("SUBTITLE");
@@ -171,8 +177,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -201,6 +207,8 @@
 									
 									rs = st.executeQuery();
 									while (rs.next()){
+										String SNO = rs.getString("SNO");
+										String MNO = rs.getString("MNO");
 										String ID = rs.getString("ID");
 										String TITLE = rs.getString("TITLE");
 										String SUBTITLE = rs.getString("SUBTITLE");
@@ -215,8 +223,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -245,6 +253,8 @@
 									
 									rs = st.executeQuery();
 									while (rs.next()){
+										String SNO = rs.getString("SNO");
+										String MNO = rs.getString("MNO");
 										String ID = rs.getString("ID");
 										String TITLE = rs.getString("TITLE");
 										String SUBTITLE = rs.getString("SUBTITLE");
@@ -259,8 +269,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?title=<%=TITLE %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>

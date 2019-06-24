@@ -36,9 +36,10 @@
 							request.setCharacterEncoding("UTF-8");
 							Class.forName("oracle.jdbc.OracleDriver");
 							Connection conn = DriverManager.getConnection(
-									"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
-									"db201312097",
-									"201312097");
+								"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
+								"db201312097",
+								"201312097"
+							);
 						%>
 						<%
 							PreparedStatement st = null;
