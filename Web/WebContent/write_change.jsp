@@ -35,18 +35,38 @@
 			<div class="row">
 				<div class="col-lg-8 posts-list">
 					<div class="single-post">
-					<%
-						String id = request.getParameter("id");
-					%>
-						<form action="lib/write_process.jsp?id=<%=id %>" method="post">
+						<%
+							String SNO = request.getParameter("sno");
+							
+							request.setCharacterEncoding("UTF-8");
+							Class.forName("oracle.jdbc.OracleDriver");
+							Connection conn = DriverManager.getConnection(
+									"jdbc:oracle:thin:@db.pknu.ac.kr:1521:xe", 
+									"db201312097",
+									"201312097");
+						%>
+						<%
+							PreparedStatement st = null;
+
+							st = conn.prepareStatement("SELECT * FROM STUDY WHERE SNO = " + SNO);
+							
+							ResultSet rs = st.executeQuery();
+							if (rs.next()) {
+								String ID_ = rs.getString("ID");
+								String TITLE = rs.getString("TITLE");
+								String SUBTITLE = rs.getString("SUBTITLE");
+								String CONTENT = rs.getString("CONTENT");
+						%>
+						
+						<form action="lib/update_process.jsp?sno=<%=SNO %>&id=<%=userid %>" method="post">
 							<div class="input-group-icon">
 								<div class="icon"><i class="fas fa-chevron-circle-right"></i></div>
-								<input type="text" name="title" placeholder="Title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title'"
+								<input type="text" name="title" value="<%=TITLE %>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Title'"
 								 required class="single-input">
 							</div>
 							<div class="input-group-icon mt-10">
 								<div class="icon"><i class="fas fa-chevron-circle-right"></i></div>
-								<input type="text" name="subtitle" placeholder="Subtitle" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subtitle'"
+								<input type="text" name="subtitle" value="<%=SUBTITLE %>" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subtitle'"
 								 required class="single-input">
 							</div>
 							<div class="input-group-icon mt-10">
@@ -64,13 +84,16 @@
 							</div>
 
 							<div class="mt-10">
-								<textarea name="content" id="editor"></textarea>
+								<textarea name="content" id="editor"><%=CONTENT %></textarea>
 							</div><br><br>
 							<div style="text-align:center;">
 								<input type="submit" value="Complete" class="button rounded-0 primary-bg text-white w-100 btn_4" type="submit">
 								<a href="study.jsp" style="display:block; margin-top:10px; font-size:15px;">Back</a>
 							</div>
 						</form>
+						<%
+							}
+						%>
 					</div>
 				</div>
 				<div class="col-lg-4">

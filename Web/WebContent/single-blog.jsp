@@ -67,7 +67,7 @@
 								if (userid.equals(ID_)) {
 						%>			
 									<div style="text-align:center; margin: 20px 0;">
-										<a style="margin-right:20px" href="#" class="genric-btn primary">수정</a>
+										<a href="write_change.jsp?sno=<%=SNO_ %>&id=<%=userid %>" style="margin-right:20px" class="genric-btn primary">수정</a>
 										<a href="lib/delete_process.jsp?sno=<%=SNO_ %>&id=<%=userid %>" class="genric-btn primary">삭제</a>
 									</div>
 						<%
