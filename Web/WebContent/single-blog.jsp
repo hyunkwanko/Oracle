@@ -114,11 +114,13 @@
 								<%
 									st = null;
 						
-									st = conn.prepareStatement("SELECT * FROM STUDY");
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND MNO = " + MNO + " AND SNO = " + SNO);
 									int i = 0;
 						
 									rs = st.executeQuery();
 									while (rs.next()) {
+										String SNO_ = rs.getString("SNO");
+										String MNO_ = rs.getString("MNO");
 										String TITLE = rs.getString("TITLE");
 										String YEAR = rs.getString("YEAR");
 										String MONTH = rs.getString("MONTH");
@@ -128,7 +130,7 @@
 										<div class="media post_item">
 											<img src="img/post/post_1.png" alt="post">
 											<div class="media-body">
-												<a href="single-blog.html">
+												<a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>">
 													<h3><%=TITLE %></h3>
 												</a>
 												<p><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></p>

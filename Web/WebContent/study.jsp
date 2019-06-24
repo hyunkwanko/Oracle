@@ -87,8 +87,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -132,8 +132,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -178,8 +178,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -224,8 +224,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>
@@ -270,8 +270,8 @@
 										<div class="single_food_item media">
 	                                        <img src="img/food_menu/single_food_<%=i %>.png" class="mr-3" alt="...">
 	                                        <div class="media-body align-self-center">
-	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=TITLE %></a></h3>
-	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>"><%=SUBTITLE %></a></p>
+	                                            <h3><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=TITLE %></a></h3>
+	                                            <p><a style="color:black;" href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>"><%=SUBTITLE %></a></p>
 	                                            <h5><%=NAME %></h5>
 	                                        </div>
 	                                    </div>

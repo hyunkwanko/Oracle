@@ -141,44 +141,6 @@
 								%>
 							</ul>
 						</aside>
-
-						<aside class="single_sidebar_widget popular_post_widget">
-							<h3 class="widget_title">Recent Post</h3>
-							<ul class="list cat-list">
-								<%
-									st = null;
-						
-									st = conn.prepareStatement("SELECT * FROM STUDY");
-									int i = 0;
-						
-									rs = st.executeQuery();
-									while (rs.next()) {
-										String TITLE = rs.getString("TITLE");
-										String YEAR = rs.getString("YEAR");
-										String MONTH = rs.getString("MONTH");
-										String DAY = rs.getString("DAY");
-										String TIME = rs.getString("TIME");
-								%>
-										<div class="media post_item">
-											<img src="img/post/post_1.png" alt="post">
-											<div class="media-body">
-												<a href="single-blog.html">
-													<h3><%=TITLE %></h3>
-												</a>
-												<p><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></p>
-											</div>
-										</div>
-								<%
-										if (i == 3) break;
-										else i++;
-									}
-
-									rs.close();
-									st.close();
-									conn.close();
-								%>
-							</ul>
-						</aside>
 					</div>
 				</div>
 			</div>

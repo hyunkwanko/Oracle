@@ -180,7 +180,7 @@
 		                        <div class="single_blog_text">
 		                            <h3><%=TITLE %></h3>
 		                            <p><%=SUBTITLE %></p>
-		                            <a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
+		                            <a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
 		                        </div>
 		                    </div>
 		                </div>	
