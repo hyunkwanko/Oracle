@@ -64,7 +64,14 @@
 							</div>
 
 							<div class="mt-10">
-								<textarea name="content" id="editor"></textarea>
+								<textarea name="content" id="editor">
+									<p>일 시 : </p>
+									<p>장 소 	: </p>
+									<p>대 상 	: </p>
+									<p>내 용 : </p>
+									<p>모집 인원 : </p>
+									<p>연락처 : </p>
+								</textarea>
 							</div><br><br>
 							<div style="text-align:center;">
 								<input type="submit" value="Complete" class="button rounded-0 primary-bg text-white w-100 btn_4" type="submit">
@@ -91,27 +98,6 @@
 								</div>
 								<button class="button rounded-0 primary-bg text-white w-100 btn_4" type="submit">Search</button>
 							</form>
-						</aside>
-
-						<aside class="single_sidebar_widget post_category_widget">
-							<h4 class="widget_title">Category</h4>
-							<ul class="list cat-list">
-								<li><a href="#" class="d-flex">
-										<p>Web</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Algorithm</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Security</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Network</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Mobile</p>
-								</a></li>
-							</ul>
 						</aside>
 					</div>
 				</div>
