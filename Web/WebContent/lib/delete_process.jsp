@@ -7,10 +7,7 @@
 	request.setCharacterEncoding("UTF-8");
 
 	String SNO = request.getParameter("sno");
-	String MNO = request.getParameter("mno");
-	String VISIT = request.getParameter("visit");
-	String USERID = request.getParameter("id");
-	int i = Integer.parseInt(VISIT);
+	String ID = request.getParameter("id");
 %>
 
 <%
@@ -26,9 +23,9 @@
 		if (SNO == null || SNO.trim().equals("")) {
 			response.sendRedirect("../404.html");
 		} else {
-			st = conn.prepareStatement("UPDATE STUDY SET VISIT = " + (i + 1) + " WHERE SNO = " + SNO);
+			st = conn.prepareStatement("DELETE FROM STUDY WHERE SNO = " + SNO);
 			st.executeUpdate();
-			response.sendRedirect("../single-blog.jsp?sno=" + SNO + "&" + "mno=" + MNO + "&" + "id=" + USERID);
+			response.sendRedirect("../index.jsp?id=" + ID);
 		}
 	} catch(Exception e) {
 		e.getStackTrace();

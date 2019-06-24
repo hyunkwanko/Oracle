@@ -51,26 +51,41 @@
 							
 							ResultSet rs = st.executeQuery();
 							if (rs.next()) {
+								String ID_ = rs.getString("ID");
+								String SNO_ = rs.getString("SNO");
+								String MNO_ = rs.getString("MNO");
 								String TITLE = rs.getString("TITLE");
 								String SUBTITLE = rs.getString("SUBTITLE");
 								String CONTENT = rs.getString("CONTENT");
+								String VISIT = rs.getString("VISIT");
 						%>
 								<h2><%=TITLE %></h2>
 								<p><%=SUBTITLE %></p>
 								<%=CONTENT %>
+							</div>
 						<%
-							}
+								if (userid.equals(ID_)) {
+						%>			
+									<div style="text-align:center; margin: 20px 0;">
+										<a style="margin-right:20px" href="#" class="genric-btn primary">수정</a>
+										<a href="lib/delete_process.jsp?sno=<%=SNO_ %>&id=<%=userid %>" class="genric-btn primary">삭제</a>
+									</div>
+						<%
+								}
 						%>
 						</div>
-					</div>
-					<div class="navigation-top">
-						<div class="d-sm-flex justify-content-between text-center">
-							<p class="like-info">
-								<span class="align-middle"><i class="far fa-heart"></i></span>
-								4 people like this
-							</p>
+						
+						<div class="navigation-top">
+							<div style="float:right" class="d-sm-flex justify-content-between text-center">
+								<p class="like-info">
+									<span class="align-middle"><i class="fas fa-user"></i></span>
+									조회수 : <%=VISIT %>
+								</p>
+							</div>
 						</div>
-					</div>
+					<%
+						}
+					%>
 				</div>
 				<div class="col-lg-4">
 					<div class="blog_right_sidebar">
