@@ -14,7 +14,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" style="font-size: 2.25rem;" href="index.jsp"> <img src="img/logo.png" alt="logo"> </a>
+	                    <%
+							String userid = request.getParameter("id");
+						
+							if (userid == null) {
+						%>
+								<a class="navbar-brand" href="index.jsp"> <img src="img/logo.png" alt="logo"> </a>
+						<%
+							} else {
+						%>
+								<a class="navbar-brand" href="index.jsp?id=<%=userid %>"> <img src="img/logo.png" alt="logo"> </a>
+						<%
+							}
+						%>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -25,24 +37,30 @@
                             id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.jsp">Home</a>
+	                                <%
+	                                	if (userid == null) {
+									%>
+											<a class="nav-link" href="index.jsp">Home</a>
+									<%
+										} else {
+									%>
+											<a class="nav-link" href="index.jsp?id=<%=userid %>">Home</a>
+									<%
+										}
+									%>
                                 </li>
                                 <li class="nav-item">
-                                <%
-									String userid = request.getParameter("id");
-		                 
-		                        	// System.out.println("null");
-		                        	
-		                        	if (userid == null) {
-		                        %>
-                                    	<a class="nav-link" href="study.jsp">Study</a>
-                                <%
-		                        	} else {
-		                        %>
-		                        		<a class="nav-link" href="study.jsp?id=<%=userid %>">Study</a>
-		                        <%
-		                        	}
-		                        %>
+	                                <%
+			                        	if (userid == null) {
+			                        %>
+	                                    	<a class="nav-link" href="study.jsp">Study</a>
+	                                <%
+			                        	} else {
+			                        %>
+			                        		<a class="nav-link" href="study.jsp?id=<%=userid %>">Study</a>
+			                        <%
+			                        	}
+			                        %>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -198,7 +216,17 @@
                            우리의 웹 서비를 활용하여 좋은 사람들과 함께 스터디해요.
    						   프로그래밍 언어, 함께 듣는 수업, 리눅스, 운영체제 등
     					   다양한 분야의 많은 스터디를 검색해보세요!</p>
-                        <a href="study.jsp" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
+						<%
+							if (userid == null) {
+						%>
+							<a href="study.jsp" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
+						<%
+							} else {
+						%>
+							<a href="study.jsp?id=<%=userid %>" class="btn_3">Read More <img src="img/icon/left_2.svg" alt=""></a>
+						<%
+							}
+						%>
                     </div>
                 </div>
             </div>

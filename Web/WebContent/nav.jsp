@@ -5,9 +5,19 @@
 		<div class="row align-items-center">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg navbar-light">
-					<a class="navbar-brand" href="index.jsp"> 
-						<img src="img/logo.png" alt="logo">
-					</a>
+					<%
+						String userid = request.getParameter("id");
+					
+						if (userid == null) {
+					%>
+							<a class="navbar-brand" href="index.jsp"><img src="img/logo.png" alt="logo"></a>
+					<%
+						} else {
+					%>
+							<a class="navbar-brand" href="index.jsp?id=<%=userid %>"><img src="img/logo.png" alt="logo"></a>
+					<%
+						}
+					%>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent"
 						aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -19,7 +29,17 @@
 						class="collapse navbar-collapse main-menu-item justify-content-end"
 						id="navbarSupportedContent">
 						<ul class="navbar-nav">
-							<li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
+								<%
+									if (userid == null) {
+		                        %>
+                                    	<li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
+                                <%
+		                        	} else {
+		                        %>
+		                        		<li class="nav-item"><a class="nav-link" href="index.jsp?id=<%=userid %>">Home</a></li>
+		                        <%
+		                        	}
+		                        %>
 							<li class="nav-item"><a class="nav-link" href="study.jsp">Study</a></li>
 							<li class="nav-item dropdown"><a
 								class="nav-link dropdown-toggle" href="blog.jsp"
@@ -34,7 +54,6 @@
 					</div>
 					<div class="menu_btn">
 						<%
-							String userid = request.getParameter("id");
 							if (userid == null) {
 		                %>
                                 <a href="404.html" class="single_page_btn d-none d-sm-block">Write</a>
