@@ -130,7 +130,7 @@
 										<div class="media post_item">
 											<img src="img/post/post_<%=i %>.png" alt="post">
 											<div class="media-body">
-												<a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>">
+												<a href="single-blog.jsp?sno=<%=SNO_ %>&mno=<%=MNO_ %>&id=<%=userid %>">
 													<h3><%=TITLE %></h3>
 												</a>
 												<p><%=YEAR %>/<%=MONTH %>/<%=DAY %>/<%=TIME %></p>
