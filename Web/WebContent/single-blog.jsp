@@ -101,7 +101,7 @@
 									while (rs.next()){
 										String TITLE = rs.getString("TITLE");
 								%>
-										<li><a href="blog.jsp?list=<%=TITLE %>" class="d-flex"><p><%=TITLE %></p></a></li>
+										<li><a href="blog.jsp?list=<%=TITLE %>&id=<%=userid %>" class="d-flex"><p><%=TITLE %></p></a></li>
 								<%
 									}
 								%>
