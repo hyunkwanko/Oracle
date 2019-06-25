@@ -62,16 +62,6 @@
 			                        	}
 			                        %>
                                 </li>
-                                <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="blog.jsp">Blog</a>
-                                        <a class="dropdown-item" href="single-blog.jsp">Single blog</a>
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
-                                    </div>
-                                </li> -->
                             </ul>
                         </div>
                         <%
@@ -84,7 +74,7 @@
                         	} else if (userid.equals("admin")){
                         %>
                         		<div style="margin: 0">
-	                                <a href="admin_member.jsp" class="genric-btn danger circle">관리자</a>
+	                                <a href="admin_member.jsp?id=<%=userid %>" class="genric-btn danger circle">관리자</a>
 	                            </div>
                         		<div class="menu_btn" style="margin: 0 20px;">
 	                                <a href="index.jsp" class="btn_1 d-none d-sm-block">Logout</a>
