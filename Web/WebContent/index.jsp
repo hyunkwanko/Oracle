@@ -165,7 +165,7 @@
 						<div class="col-sm-6 col-lg-4">
 		                    <div class="single_blog_item">
 		                        <div class="single_blog_img">
-		                            <img src="img/food_item/food_item_<%=i %>.png" alt="">
+		                            <img src="img/main/main_<%=i %>.png" alt="">
 		                        </div>
 		                        <div class="single_blog_text">
 		                            <h3><%=TITLE %></h3>

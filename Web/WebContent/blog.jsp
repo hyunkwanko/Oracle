@@ -43,6 +43,7 @@
 						%>
 						<%
 							PreparedStatement st = null;
+							int i = 1;
 							
 							st = conn.prepareStatement("SELECT * FROM STUDY,MEMBER WHERE member.id = study.id AND study.list = '" + list + "'");
 							
@@ -61,7 +62,7 @@
 						%>
 								<article class="blog_item">
 									<div class="blog_item_img">
-										<img class="card-img rounded-0" src="img/blog/single_blog_2.png" alt=""> 
+										<img class="card-img rounded-0" src="img/blog/single_blog_<%=i %>.png" alt=""> 
 										<span class="blog_item_date">
 											<h3><%=DAY %></h3>
 											<p style="text-align: center;"><%=MONTH %></p>
@@ -82,6 +83,8 @@
 									</div>
 								</article>
 						<%
+								if(i == 2) i = 0;
+								else i++;
 							}
 						%>
 						
