@@ -65,7 +65,7 @@
                             </ul>
                         </div>
                         <%
-                        	if (userid == null) {
+                        	if (userid == null || userid.equals("null")) {
                         %>
                         		<div class="menu_btn" style="margin: 0 20px;">
 	                                <a href="login.jsp" class="btn_1 d-none d-sm-block">Login & Sign up</a>

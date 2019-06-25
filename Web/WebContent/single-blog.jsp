@@ -114,7 +114,7 @@
 								<%
 									st = null;
 						
-									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id AND MNO = " + MNO + " AND SNO = " + SNO);
+									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id");
 									int i = 0;
 						
 									rs = st.executeQuery();

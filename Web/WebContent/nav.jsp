@@ -40,7 +40,7 @@
 		                        <%
 		                        	}
 		                        %>
-							<li class="nav-item"><a class="nav-link" href="study.jsp">Study</a></li>
+							<li class="nav-item"><a class="nav-link" href="study.jsp?id=<%=userid %>">Study</a></li>
 						</ul>
 					</div>
 
