@@ -83,7 +83,7 @@
 									</div>
 								</article>
 						<%
-								if(i == 2) i = 0;
+								if(i == 4) i = 1;
 								else i++;
 							}
 						%>

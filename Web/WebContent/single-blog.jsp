@@ -115,7 +115,7 @@
 									st = null;
 						
 									st = conn.prepareStatement("SELECT * FROM MEMBER,STUDY WHERE member.id = study.id");
-									int i = 0;
+									int i = 1;
 						
 									rs = st.executeQuery();
 									while (rs.next()) {
@@ -128,7 +128,7 @@
 										String TIME = rs.getString("TIME");
 								%>
 										<div class="media post_item">
-											<img src="img/post/post_1.png" alt="post">
+											<img src="img/post/post_<%=i %>.png" alt="post">
 											<div class="media-body">
 												<a href="single-blog.jsp?sno=<%=SNO %>&mno=<%=MNO %>&id=<%=userid %>">
 													<h3><%=TITLE %></h3>
@@ -137,7 +137,7 @@
 											</div>
 										</div>
 								<%
-										if (i == 3) break;
+										if (i == 4) break;
 										else i++;
 									}
 
